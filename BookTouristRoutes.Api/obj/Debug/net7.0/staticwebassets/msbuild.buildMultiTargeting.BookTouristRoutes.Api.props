@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BookTouristRoutes.Api.props" />
+</Project>
