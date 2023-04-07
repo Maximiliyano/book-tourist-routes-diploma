@@ -1,0 +1,14 @@
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\bin\Debug\net7.0\BookTouristRoutes.Common.deps.json
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\bin\Debug\net7.0\BookTouristRoutes.Common.runtimeconfig.json
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\bin\Debug\net7.0\BookTouristRoutes.Common.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\bin\Debug\net7.0\BookTouristRoutes.Common.pdb
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.csproj.AssemblyReference.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.AssemblyInfoInputs.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.AssemblyInfo.cs
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.csproj.CoreCompileInputs.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\refint\BookTouristRoutes.Common.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.pdb
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\BookTouristRoutes.Common.genruntimeconfig.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Common\obj\Debug\net7.0\ref\BookTouristRoutes.Common.dll

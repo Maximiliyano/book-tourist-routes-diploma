@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Local\\C#\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\BookTouristRoutes.Web.csproj",
+      "projectUniqueName": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\BookTouristRoutes.Web.csproj",
       "projectName": "BookTouristRoutes.Web",
-      "projectPath": "E:\\Local\\C#\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\BookTouristRoutes.Web.csproj",
+      "projectPath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\BookTouristRoutes.Web.csproj",
       "packagesPath": "C:\\Users\\maxim\\.nuget\\packages\\",
-      "outputPath": "E:\\Local\\C#\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\obj\\",
+      "outputPath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maxim\\AppData\\Roaming\\NuGet\\NuGet.Config",

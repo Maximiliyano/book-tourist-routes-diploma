@@ -1,0 +1,17 @@
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.DAL.deps.json
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.DAL.runtimeconfig.json
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.DAL.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.DAL.pdb
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.Common.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\bin\Debug\net7.0\BookTouristRoutes.Common.pdb
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.csproj.AssemblyReference.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.AssemblyInfoInputs.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.AssemblyInfo.cs
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.csproj.CoreCompileInputs.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.csproj.CopyComplete
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\refint\BookTouristRoutes.DAL.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.pdb
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\BookTouristRoutes.DAL.genruntimeconfig.cache
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.DAL\obj\Debug\net7.0\ref\BookTouristRoutes.DAL.dll
