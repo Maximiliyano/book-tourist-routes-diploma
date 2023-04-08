@@ -1,10 +1,10 @@
-﻿using BookTouristRoutes.Common.Extensions;
+﻿using BookTouristRoutes.Api.Extensions;
 using BookTouristRoutes.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookTouristRoutes.Api;
 
-public class Startup
+public class Startup // TODO connect angular
 {
   private readonly IConfiguration _configuration;
 
@@ -19,7 +19,8 @@ public class Startup
     var migrationAssembly = typeof(BookTouristRoutesContext).Assembly.GetName().Name;
     services.AddDbContext<BookTouristRoutesContext>(options =>
       options.UseSqlServer(_configuration.GetConnectionString("DbConnection"),
-        opt => opt.MigrationsAssembly(migrationAssembly)));
+        opt => opt.MigrationsAssembly(migrationAssembly))
+        .EnableSensitiveDataLogging());
 
     services.RegisterCustomServices();
     services.RegisterRepositories();

@@ -1,6 +1,8 @@
-﻿namespace BookTouristRoutes.BLL.BaseEntities;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class BaseController
+namespace BookTouristRoutes.Common.BaseEntities;
+
+[Route("api/[controller]")]
+public class BaseController : ControllerBase
 {
-  
 }

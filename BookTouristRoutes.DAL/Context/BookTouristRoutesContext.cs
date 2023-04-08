@@ -1,5 +1,5 @@
-﻿using BookTouristRoutes.Common.Extensions;
-using BookTouristRoutes.DAL.Dtos;
+﻿using BookTouristRoutes.Common.Dtos;
+using BookTouristRoutes.Common.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookTouristRoutes.DAL.Context;
