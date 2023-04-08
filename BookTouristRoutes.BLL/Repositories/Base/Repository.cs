@@ -14,7 +14,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     _context = context;
   }
 
-  public virtual async Task AddAsync(TEntity entity)
+  public virtual async Task CreateAsync(TEntity entity)
   {
     await _context.Set<TEntity>().AddAsync(entity);
     await SaveChangesAsync();
@@ -27,10 +27,14 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 
   public virtual async Task<TEntity?> GetByIdAsync(int id)
   {
-    return await _context.Set<TEntity>().FindAsync(id);
+    var response = await _context.Set<TEntity>().FindAsync(id);
+    if (response is not null)
+      _context.Entry(response).State = EntityState.Detached;
+
+    return response;
   }
 
-  public virtual async Task RemoveAsync(TEntity entity)
+  public virtual async Task DeleteAsync(TEntity entity)
   {
     _context.Set<TEntity>().Remove(entity);
     await SaveChangesAsync();
@@ -40,7 +44,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
   {
     _context.Entry(entity).State = EntityState.Modified;
     _context.Set<TEntity>().Update(entity);
-    await SaveChangesAsync();
+    await _context.SaveChangesAsync();
     _context.Entry(entity).State = EntityState.Detached;
   }
 
@@ -51,11 +55,18 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 
   public virtual async Task<TEntity> FirstAsync(Expression<Func<TEntity, bool>> expression)
   {
-    return await _context.Set<TEntity>().Where(expression).AsQueryable().FirstAsync();
+    var response = await _context.Set<TEntity>().Where(expression).AsQueryable().FirstAsync();
+    _context.Entry(response).State = EntityState.Detached;
+
+    return response;
   }
 
   public virtual async Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> expression)
   {
-    return await _context.Set<TEntity>().Where(expression).AsQueryable().FirstOrDefaultAsync();
+    var response = await _context.Set<TEntity>().Where(expression).AsQueryable().FirstOrDefaultAsync();
+    if (response is not null)
+      _context.Entry(response).State = EntityState.Detached;
+
+    return response;
   }
 }

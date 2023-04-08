@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using BookTouristRoutes.Common.Dtos;
-using BookTouristRoutes.Common.Models;
 using BookTouristRoutes.Common.Models.User;
 
 namespace BookTouristRoutes.Common.Extensions;
@@ -13,6 +12,7 @@ public static class MapperResolver
     {
       cfg.CreateMap<User, UserDto>();
       cfg.CreateMap<UserDto, User>();
+      cfg.CreateMap<UpdateUser, UserDto>();
       cfg.CreateMap<RegisterUser, UserDto>();
     });
 

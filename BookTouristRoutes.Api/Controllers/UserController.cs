@@ -1,6 +1,5 @@
 using BookTouristRoutes.BLL.Services;
 using BookTouristRoutes.Common.BaseEntities;
-using BookTouristRoutes.Common.Extensions;
 using BookTouristRoutes.Common.Models.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +25,7 @@ public class UserController : BaseController
       return BadRequest();
     }
 
-    var registeredUserIdResponse = await _userService.Create(registerUser);
+    var registeredUserIdResponse = await _userService.CreateAsync(registerUser);
     return CreatedAtAction(nameof(Create), registeredUserIdResponse);
   }
 
@@ -59,7 +58,7 @@ public class UserController : BaseController
   }
 
   [HttpPut]
-  public async Task<IActionResult> Update([FromBody] User user)
+  public async Task<IActionResult> Update([FromBody] UpdateUser user)
   {
     if (!ModelState.IsValid)
     {
