@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BookTouristRoutes.Api;
 
 public class Startup // TODO connect angular
-{
+{// TODO connect JWT
   private readonly IConfiguration _configuration;
 
   public Startup(IConfiguration configuration)

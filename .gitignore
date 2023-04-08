@@ -340,9 +340,9 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# Backup folder for Package Reference Convert tool in Visual Studio 2017
-MigrationBackup/
-frontend/src/.prettierrc.json
-frontend/.vscode/settings.json
-frontend/.vscode/launch.json
-frontend/test.rest
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
