@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Ignore any files in /bin and /obj Folders
+**/bin/*
+**/obj/*
+
 # User-specific files
 *.rsuser
 *.suo
@@ -346,3 +350,26 @@ _ReSharper.*
 bin
 obj
 packages
+BookTouristRoutes.DAL/obj/Debug/net7.0/BookTouristRoutes.DAL.csproj.AssemblyReference.cache
+BookTouristRoutes.DAL/obj/rider.project.restore.info
+BookTouristRoutes.DAL/bin/Debug/net7.0/BookTouristRoutes.Common.pdb
+BookTouristRoutes.DAL/bin/Debug/net7.0/BookTouristRoutes.Common.dll
+BookTouristRoutes.Common/obj/Debug/net7.0/BookTouristRoutes.Common.pdb
+BookTouristRoutes.Common/obj/Debug/net7.0/BookTouristRoutes.Common.dll
+BookTouristRoutes.Common/bin/Debug/net7.0/BookTouristRoutes.Common.pdb
+BookTouristRoutes.Common/obj/rider.project.restore.info
+BookTouristRoutes.Common/bin/Debug/net7.0/BookTouristRoutes.Common.dll
+BookTouristRoutes.BLL/obj/Debug/net7.0/BookTouristRoutes.BLL.pdb
+BookTouristRoutes.BLL/obj/Debug/net7.0/BookTouristRoutes.BLL.dll
+BookTouristRoutes.BLL/obj/Debug/net7.0/BookTouristRoutes.BLL.csproj.AssemblyReference.cache
+BookTouristRoutes.BLL/obj/rider.project.restore.info
+BookTouristRoutes.BLL/bin/Debug/net7.0/BookTouristRoutes.BLL.pdb
+BookTouristRoutes.BLL/bin/Debug/net7.0/BookTouristRoutes.BLL.dll
+BookTouristRoutes.Api/obj/Debug/net7.0/BookTouristRoutes.Api.pdb
+BookTouristRoutes.Api/obj/Debug/net7.0/BookTouristRoutes.Api.csproj.AssemblyReference.cache
+BookTouristRoutes.Api/obj/Debug/net7.0/BookTouristRoutes.Api.dll
+BookTouristRoutes.Api/obj/rider.project.restore.info
+BookTouristRoutes.Api/bin/Debug/net7.0/BookTouristRoutes.Common.pdb
+BookTouristRoutes.Api/bin/Debug/net7.0/BookTouristRoutes.Common.dll
+BookTouristRoutes.Api/bin/Debug/net7.0/BookTouristRoutes.Api.pdb
+BookTouristRoutes.Api/bin/Debug/net7.0/BookTouristRoutes.Api.dll
