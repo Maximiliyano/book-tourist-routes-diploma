@@ -266,3 +266,46 @@ paket-files/
 ./BookTouristRoutes.Api/obj/Debug/net7.0/BookTouristRoutes.Api.csproj.AssemblyReference.cache
 ./BookTouristRoutes.BLL/obj/Debug/net7.0/BookTouristRoutes.BLL.csproj.AssemblyReference.cache
 .gitignore
+
+# Build artifacts
+/bin/
+/obj/
+
+# Visual Studio files
+*.suo
+*.user
+*.ncb
+*.aps
+*.pdb
+*.vspscc
+*.vssscc
+*.obj
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.tlb
+*.tlh
+*.tmp
+*.tmp_proj
+*.prj
+*.odl
+*.IDL
+*.hlp
+*.pch
+*.res
+*.tlh
+*.tlb
+*.old
+*.exp
+
+# Other files to ignore
+Thumbs.db
+Desktop.ini
+*.log
+*.vspx
+*.userprefs
+
