@@ -5,7 +5,7 @@ namespace BookTouristRoutes.BLL.Interfaces.Repositories;
 public interface IRepository<TEntity> where TEntity : class
 {
   Task AddAsync(TEntity entity);
-  Task<TEntity> FindFirstAsync(Expression<Func<TEntity, bool>> expression);
+  Task<TEntity> FirstAsync(Expression<Func<TEntity, bool>> expression);
   Task<IEnumerable<TEntity>> GetAllAsync();
   Task<TEntity?> GetByIdAsync(int id);
   Task RemoveAsync(TEntity entity);

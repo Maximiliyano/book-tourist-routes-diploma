@@ -114,3 +114,4 @@ C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\ob
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\obj\Debug\net7.0\BookTouristRoutes.Api.pdb
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\obj\Debug\net7.0\BookTouristRoutes.Api.genruntimeconfig.cache
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\obj\Debug\net7.0\ref\BookTouristRoutes.Api.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -49,12 +49,12 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     await _context.SaveChangesAsync();
   }
 
-  public virtual async Task<TEntity> FindFirstAsync(Expression<Func<TEntity, bool>> expression)
+  public virtual async Task<TEntity> FirstAsync(Expression<Func<TEntity, bool>> expression)
   {
     return await _context.Set<TEntity>().Where(expression).AsQueryable().FirstAsync();
   }
 
-  public virtual async Task<TEntity?> FindFirstOrDefaultAsync(Expression<Func<TEntity, bool>> expression)
+  public virtual async Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> expression)
   {
     return await _context.Set<TEntity>().Where(expression).AsQueryable().FirstOrDefaultAsync();
   }

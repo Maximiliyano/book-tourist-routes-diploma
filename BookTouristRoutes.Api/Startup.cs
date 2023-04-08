@@ -1,4 +1,5 @@
 ﻿using BookTouristRoutes.Api.Extensions;
+using BookTouristRoutes.Common.Extensions;
 using BookTouristRoutes.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,6 +38,8 @@ public class Startup // TODO connect angular
     {
       app.UseDeveloperExceptionPage();
     }
+
+    app.UseMiddleware<CustomExceptionHandlerMiddleware>();
 
     app.UseSwagger();
     app.UseSwaggerUI();

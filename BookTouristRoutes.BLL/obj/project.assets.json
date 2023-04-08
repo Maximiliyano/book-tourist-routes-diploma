@@ -1935,7 +1935,8 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
-          "Microsoft.EntityFrameworkCore": "7.0.4"
+          "Microsoft.EntityFrameworkCore": "7.0.4",
+          "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
           "bin/placeholder/BookTouristRoutes.Common.dll": {}
