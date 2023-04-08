@@ -1,12 +1,18 @@
-# Visual Studio Code files
-.vscode/
-*.code-workspace
+# Ignore node_modules
+node_modules/
 
-# Visual Studio files
-*.suo
-*.user
-*.sln.docstates
+# Ignore npm debugging logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore build output and other generated files
 *.dll
+*.exe
+*.pdb
+*.user
+*.log
+*.vspscc
 bin/
 obj/
 Debug/
@@ -19,29 +25,27 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
-# Rider files
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# ASP.NET Core files
+# Ignore ASP.NET Core Web API project files
 *.swp
 *~.nib
 *.cache
-*.log
 *.userprefs
 *.pidb
 *.userprefs
+*.csproj.user
+*.csproj.vspscc
 
-# Angular files
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Ignore Angular CLI output
+/dist
+/tmp
+/angular-cli.json
+/.angular-cli.json
+/.ng_cli_compat_version
+/*.js.map
 
-# Ignore csproj assembly references
-**/*.csproj.user
-**/*.csproj.vspscc
-**/*AssemblyReference*.csproj
+# Ignore Visual Studio Code files
+.vscode/
+*.code-workspace
+
+# Ignore bin directories in all projects
+**/bin/
