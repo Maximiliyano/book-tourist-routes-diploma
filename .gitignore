@@ -49,3 +49,11 @@ UpgradeLog*.htm
 
 # Ignore bin directories in all projects
 **/bin/
+
+# Ignore Debug, bin, obj, and other necessary files in the BookTouristRoutes.Api project
+BookTouristRoutes.Api/Debug/
+BookTouristRoutes.Api/bin/
+BookTouristRoutes.Api/obj/
+BookTouristRoutes.Api/**/*.pdb
+BookTouristRoutes.Api/**/*.user
+BookTouristRoutes.Api/**/*.vspscc
