@@ -309,3 +309,7 @@ Desktop.ini
 *.vspx
 *.userprefs
 
+BookTouristRoutes.Api/obj/Debug/net7.0/BookTouristRoutes.Api.csproj.FileListAbsolute.txt
+.gitignore
+BookTouristRoutes.Common/obj/Debug/net7.0/BookTouristRoutes.Common.csproj.AssemblyReference.cache
+BookTouristRoutes.DAL/obj/Debug/net7.0/BookTouristRoutes.DAL.csproj.AssemblyReference.cache
