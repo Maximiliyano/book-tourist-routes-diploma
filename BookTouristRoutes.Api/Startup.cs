@@ -28,6 +28,16 @@ public class Startup // TODO connect angular
 
     services.AddControllers();
     services.AddSwaggerGen();
+
+    services.AddCors(options =>
+    {
+      options.AddPolicy("CorsPolicy",
+        builder => builder
+          .AllowAnyOrigin()
+          .AllowAnyMethod()
+          .AllowAnyHeader());
+    });
+
   }
 
   public void Configure(
@@ -38,6 +48,8 @@ public class Startup // TODO connect angular
     {
       app.UseDeveloperExceptionPage();
     }
+
+    app.UseCors("CorsPolicy");
 
     app.UseMiddleware<CustomExceptionHandlerMiddleware>();
 

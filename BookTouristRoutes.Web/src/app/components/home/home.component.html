@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div class="header">
+    <div class="header-content title" [routerLink]="['/']">
+      <img src="/assets/logo.png">
+      Book Tourist Routes
+    </div>
+  </div>
+</mat-toolbar>
+<div class="main-content">
+
+  <div>
+    <button (click)="getUser()">Get User</button>
+    <div *ngIf="userData">
+      <h2>User Data</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <td>{{ userData.id }}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{ userData.name }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
