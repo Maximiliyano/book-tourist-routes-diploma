@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace BookTouristRoutes.Common.Extensions;
+namespace BookTouristRoutes.Common.Exceptions;
 
 public class CustomException : Exception
 {

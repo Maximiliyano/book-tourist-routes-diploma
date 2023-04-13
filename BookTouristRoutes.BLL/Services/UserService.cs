@@ -1,78 +1,126 @@
 using System.Net;
+using AutoMapper;
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.BLL.Repositories;
-using BookTouristRoutes.BLL.Repositories.Base;
 using BookTouristRoutes.BLL.Services.Base;
 using BookTouristRoutes.Common.Dtos;
-using BookTouristRoutes.Common.Extensions;
-using BookTouristRoutes.Common.Models.User;
+using BookTouristRoutes.Common.Exceptions;
+using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Services;
 
-public class UserService : BaseService<Repository<UserDto>, UserDto>, IUserService
+public class UserService : BaseService<UserRepository, User>, IUserService
 {
-  public UserService(UserRepository userRepository) : base(userRepository)
+  private readonly ImageService _imageService;
+
+  public UserService(
+    UserRepository userRepository,
+    ImageRepository imageRepository,
+    IMapper mapper) : base(userRepository, mapper)
   {
+    _imageService = new ImageService(imageRepository, mapper);
   }
 
-  public async Task<int> CreateAsync(RegisterUser registerUser)
+  public async Task<int> CreateUser(RegisterUserDto registerUser)
   {
-    await ValidateUserIsExistByName(registerUser.Name);
+    await ValidateUserIsExistByEmail(registerUser.Email);
 
-    var userDto = _mapper.Map<UserDto>(registerUser);
+    var user = _mapper.Map<User>(registerUser);
 
-    await Create(userDto);
-    return (await _repository.FirstAsync(x => x.Name == userDto.Name)).Id;
+    await Create(user);
+    return (await _repository.FirstAsync(x => x.Email == user.Email)).Id;
   }
 
   public async Task Delete(int userId)
   {
-    var userDto = await ValidateUserIsNotExistById(userId);
-    await Delete(userDto);
+    var user = await Get(userId);
+    await Delete(user);
   }
 
-  public async Task<User> Update(UpdateUser updateUser)
+  public async Task<User> ChangePassword(int userId, string newPassword)
   {
-    var user = await ValidateUserIsNotExistById(updateUser.Id);
-    await ValidateUserIsExistByName(updateUser.Name);
+    var userEntity = await Get(userId);
 
-    var userDto = _mapper.Map<UserDto>(updateUser);
-    userDto.CreatedAt = user.CreatedAt;
+    userEntity.Password = newPassword;
 
-    await Update(userDto);
-    return _mapper.Map<User>(userDto);
+    await Update(userEntity);
+    return userEntity;
+  }
+
+  public async Task<User> UpdateUser(UserDto userDto)
+  {
+    var userEntity = await Get(userDto.Id);
+
+    userEntity.Email = userDto.Email;
+
+    if (!string.IsNullOrEmpty(userDto.Avatar))
+    {
+      if (userEntity.Avatar is null)
+      {
+        var image = BuildImageEntity(userDto.Avatar);
+
+        userEntity.Avatar = image;
+        await _imageService.CreateImage(image);
+
+        var imageId = (await _imageService.GetEntityByUrl(image.URL)).Id;
+
+        userEntity.AvatarId = imageId;
+        userEntity.Avatar.Id = imageId;
+      }
+      else
+      {
+        userEntity.Avatar.URL = userDto.Avatar;
+        userEntity.Avatar.UpdatedAt = DateTime.Now;
+
+        await _imageService.UpdateImage(userEntity.Avatar);
+      }
+    }
+    else
+    {
+      if (userEntity.Avatar is not null)
+      {
+        await _imageService.Remove(userEntity.Avatar);
+      }
+    }
+
+    await Update(userEntity);
+    return userEntity;
   }
 
   public async Task<User?> Get(int userId)
   {
-    var userDto = await _repository.GetByIdAsync(userId);
-    return userDto is not null ? _mapper.Map<User>(userDto) : null;
+    var user = await _repository.GetByIdAsync(userId);
+
+    if (user is null)
+      throw CustomException.EntityNotFound(nameof(user), userId);
+
+    return user;
   }
 
-  public async Task<User?> Get(string name)
+  public async Task<User?> Get(string email)
   {
-    var userDto = await _repository.FirstOrDefaultAsync(x => x.Name == name);
-    return userDto is not null ? _mapper.Map<User>(userDto) : null;
+    var user = await _repository.GetByEmailAsync(email);;
+
+    if (user is null)
+      throw CustomException.EntityNotFound(nameof(user), email);
+
+    return user;
   }
 
   public async Task<IEnumerable<User>> GetAll() =>
     await _repository.GetAllAsync();
 
-  private async Task ValidateUserIsExistByName(string name)
+  private async Task ValidateUserIsExistByEmail(string email)
   {
-    var user = await _repository.FirstOrDefaultAsync(x => x.Name == name);
+    var user = await _repository.GetByEmailAsync(email);
 
     if (user is not null)
-      throw new CustomException("User with the same name is exist in system!", HttpStatusCode.BadRequest);
+      throw new CustomException("User with the same email is exist in system!", HttpStatusCode.BadRequest);
   }
 
-  private async Task<UserDto> ValidateUserIsNotExistById(int userId)
-  {
-    var userDto = await _repository.FirstOrDefaultAsync(x => x.Id == userId);
-
-    if (userDto is null)
-      throw new CustomException("User is not exist in system!", HttpStatusCode.NotFound);
-
-    return userDto;
-  }
+  private static Image BuildImageEntity(string url) =>
+    new()
+    {
+      URL = url
+    };
 }

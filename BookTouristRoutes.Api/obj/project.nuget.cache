@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGFmEdBrZEuF4a/YsDeQk8dnsiSYl+6i6v+YPrcWXWvOWPTTibeEjTl+ErfbefBu5L5Yp4GVrNxvFxLCLCxlhw==",
+  "dgSpecHash": "Wc8DpUOjF8ohlz1mwM9e9/TW/Y04O5CJmmqPSp9aBC5awbT+ozwc+HgQJN28CqPgHCZKtMAZ20lS9ujlkSzRqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.Api\\BookTouristRoutes.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxim\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

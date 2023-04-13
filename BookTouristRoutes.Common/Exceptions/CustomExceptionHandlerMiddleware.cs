@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace BookTouristRoutes.Common.Extensions;
+namespace BookTouristRoutes.Common.Exceptions;
 
 public class CustomExceptionHandlerMiddleware
 {

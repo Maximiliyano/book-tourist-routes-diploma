@@ -1,12 +1,12 @@
 ﻿using BookTouristRoutes.Api.Extensions;
-using BookTouristRoutes.Common.Extensions;
+using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.DAL.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookTouristRoutes.Api;
 
-public class Startup // TODO connect angular
-{// TODO connect JWT
+public class Startup
+{
   private readonly IConfiguration _configuration;
 
   public Startup(IConfiguration configuration)
@@ -22,6 +22,8 @@ public class Startup // TODO connect angular
       options.UseSqlServer(_configuration.GetConnectionString("DbConnection"),
         opt => opt.MigrationsAssembly(migrationAssembly))
         .EnableSensitiveDataLogging());
+
+    services.RegisterAutoMapper();
 
     services.RegisterCustomServices();
     services.RegisterRepositories();

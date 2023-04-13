@@ -1,22 +1,21 @@
 ﻿using AutoMapper;
 using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.Common.BaseEntities;
-using BookTouristRoutes.Common.Extensions;
 
 namespace BookTouristRoutes.BLL.Services.Base;
 
 public abstract class BaseService<TRepository, TEntity>
-  where TEntity : BaseModel
   where TRepository : IRepository<TEntity>
+  where TEntity : BaseModel
 {
   protected readonly IMapper _mapper;
 
   protected readonly TRepository _repository;
 
-  protected BaseService(TRepository repository)
+  protected BaseService(TRepository repository, IMapper mapper)
   {
     _repository = repository;
-    _mapper = MapperResolver.InitiateMapping();
+    _mapper = mapper;
   }
 
   protected Task Create(TEntity model)
