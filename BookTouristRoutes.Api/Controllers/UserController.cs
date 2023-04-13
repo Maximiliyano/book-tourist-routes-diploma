@@ -1,6 +1,6 @@
 using BookTouristRoutes.BLL.Services;
 using BookTouristRoutes.Common.BaseEntities;
-using BookTouristRoutes.Common.Models.User;
+using BookTouristRoutes.Common.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookTouristRoutes.Api.Controllers;
@@ -18,14 +18,14 @@ public class UserController : BaseController
 
 
   [HttpPost("new")]
-  public async Task<IActionResult> Create([FromBody] RegisterUser registerUser)
+  public async Task<IActionResult> Create([FromBody] RegisterUserDto registerUser)
   {
     if (!ModelState.IsValid)
     {
       return BadRequest();
     }
 
-    var registeredUserIdResponse = await _userService.CreateAsync(registerUser);
+    var registeredUserIdResponse = await _userService.CreateUser(registerUser);
     return CreatedAtAction(nameof(Create), registeredUserIdResponse);
   }
 
@@ -38,34 +38,30 @@ public class UserController : BaseController
   [HttpGet("details/{userId:int}")]
   public async Task<IActionResult> GetById([FromRoute] int userId)
   {
-    var response = await _userService.Get(userId);
-
-    if (response is null)
-      return BadRequest();
-
-    return Ok(response);
+    return Ok(await _userService.Get(userId));
   }
 
   [HttpGet("details")]
-  public async Task<IActionResult> GetByName([FromQuery] string userName)
+  public async Task<IActionResult> GetByName([FromQuery] string userEmail)
   {
-    var response = await _userService.Get(userName);
+    return Ok(await _userService.Get(userEmail));
+  }
 
-    if (response is null)
-      return BadRequest();
-
-    return Ok(response);
+  [HttpPut("{userId:int}/change-pass")]
+  public async Task<IActionResult> ChangePassword([FromRoute] int userId, [FromQuery] string newPassword)
+  {
+    return Ok(await _userService.ChangePassword(userId, newPassword));
   }
 
   [HttpPut]
-  public async Task<IActionResult> Update([FromBody] UpdateUser user)
+  public async Task<IActionResult> Update([FromBody] UserDto user)
   {
     if (!ModelState.IsValid)
     {
       return BadRequest();
     }
 
-    var response = await _userService.Update(user);
+    var response = await _userService.UpdateUser(user);
     return Ok(response);
   }
 

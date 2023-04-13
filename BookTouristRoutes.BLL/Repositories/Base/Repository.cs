@@ -20,20 +20,6 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     await SaveChangesAsync();
   }
 
-  public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
-  {
-    return await _context.Set<TEntity>().ToListAsync();
-  }
-
-  public virtual async Task<TEntity?> GetByIdAsync(int id)
-  {
-    var response = await _context.Set<TEntity>().FindAsync(id);
-    if (response is not null)
-      _context.Entry(response).State = EntityState.Detached;
-
-    return response;
-  }
-
   public virtual async Task DeleteAsync(TEntity entity)
   {
     _context.Set<TEntity>().Remove(entity);
