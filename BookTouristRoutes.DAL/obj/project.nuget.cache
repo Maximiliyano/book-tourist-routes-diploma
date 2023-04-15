@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MyFWpPj1wlNc5A8+Tw+GUTHNDNppTr+rzsl0kiMFTXKToswsHITcgStvkcXqPdX3QGz1u6X/9Ctr5MixrpJ6CQ==",
+  "dgSpecHash": "eSh+4iYVZ/SBZv3yiZIhA1qSqcHP5OZQ7wY9ils1rjQufB9fqq6C/eR/4RKphYPnmTCNyPnVq1YgzXNPslChQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.DAL\\BookTouristRoutes.DAL.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",

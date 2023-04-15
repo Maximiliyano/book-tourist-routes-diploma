@@ -2,7 +2,7 @@ using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Interfaces.Repositories;
 
-public interface IImageRepository
+public interface IImageRepository : IRepository<Image>
 {
-  Task RemoveImage(Image image);
+  Task RemoveImageAsync(Image image);
 }

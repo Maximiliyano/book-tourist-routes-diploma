@@ -1,4 +1,4 @@
-using BookTouristRoutes.BLL.Services;
+using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.Common.BaseEntities;
 using BookTouristRoutes.Common.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -9,24 +9,11 @@ namespace BookTouristRoutes.Api.Controllers;
 [Route("api/user")]
 public class UserController : BaseController
 {
-  private readonly UserService _userService;
+  private readonly IUserService _userService;
 
-  public UserController(UserService userService)
+  public UserController(IUserService userService)
   {
     _userService = userService;
-  }
-
-
-  [HttpPost("new")]
-  public async Task<IActionResult> Create([FromBody] RegisterUserDto registerUser)
-  {
-    if (!ModelState.IsValid)
-    {
-      return BadRequest();
-    }
-
-    var registeredUserIdResponse = await _userService.CreateUser(registerUser);
-    return CreatedAtAction(nameof(Create), registeredUserIdResponse);
   }
 
   [HttpGet("all")]

@@ -14,6 +14,6 @@ public class ImageRepository : Repository<Image>, IImageRepository
     _context = context;
   }
 
-  public async Task RemoveImage(Image image) =>
+  public async Task RemoveImageAsync(Image image) =>
     _context.Images.Remove(image);
 }
