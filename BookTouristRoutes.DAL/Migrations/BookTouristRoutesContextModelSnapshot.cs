@@ -45,6 +45,37 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.ToTable("Images");
                 });
 
+            modelBuilder.Entity("BookTouristRoutes.Common.Models.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
+                });
+
             modelBuilder.Entity("BookTouristRoutes.Common.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -74,6 +105,10 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.Property<int>("Roles")
                         .HasColumnType("int");
 
+                    b.Property<string>("Salt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -82,6 +117,17 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.HasIndex("AvatarId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("BookTouristRoutes.Common.Models.RefreshToken", b =>
+                {
+                    b.HasOne("BookTouristRoutes.Common.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BookTouristRoutes.Common.Models.User", b =>

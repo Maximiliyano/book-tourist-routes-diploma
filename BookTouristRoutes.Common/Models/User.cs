@@ -11,6 +11,8 @@ public class User : BaseModel
 
   public string Password { get; set; }
 
+  public string Salt { get; set; }
+
   public UserRoles Roles { get; set; }
 
   public Image Avatar { get; set; }

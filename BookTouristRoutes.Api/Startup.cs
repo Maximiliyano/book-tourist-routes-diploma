@@ -25,8 +25,10 @@ public class Startup
 
     services.RegisterAutoMapper();
 
-    services.RegisterCustomServices();
     services.RegisterRepositories();
+    services.RegisterCustomServices();
+
+    services.ConfigureJwt(_configuration);
 
     services.AddControllers();
     services.AddSwaggerGen();
@@ -40,6 +42,7 @@ public class Startup
           .AllowAnyHeader());
     });
 
+    services.AddAuthentication();
   }
 
   public void Configure(
@@ -51,6 +54,11 @@ public class Startup
       app.UseDeveloperExceptionPage();
     }
 
+    app.UseRouting();
+    app.UseHttpsRedirection();
+    app.UseAuthentication();
+    app.UseAuthorization();
+
     app.UseCors("CorsPolicy");
 
     app.UseMiddleware<CustomExceptionHandlerMiddleware>();
@@ -58,11 +66,23 @@ public class Startup
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    app.UseRouting();
-
     app.UseEndpoints(cfg =>
     {
       cfg.MapControllers();
     });
+
+    InitializeDatabase(app);
+  }
+
+  private static void InitializeDatabase(IApplicationBuilder app)
+  {
+    using var scope = app.ApplicationServices
+      .GetService<IServiceScopeFactory>()?
+      .CreateScope();
+
+    using var context = scope?.ServiceProvider
+      .GetRequiredService<BookTouristRoutesContext>();
+
+    context?.Database.Migrate();
   }
 }

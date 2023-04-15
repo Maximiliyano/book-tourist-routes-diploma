@@ -1,34 +1,41 @@
 using System.Net;
 using AutoMapper;
+using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
-using BookTouristRoutes.BLL.Repositories;
 using BookTouristRoutes.BLL.Services.Base;
 using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Exceptions;
+using BookTouristRoutes.Common.Helpers;
 using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Services;
 
-public class UserService : BaseService<UserRepository, User>, IUserService
+public class UserService : BaseService<IUserRepository, User>, IUserService
 {
   private readonly ImageService _imageService;
 
   public UserService(
-    UserRepository userRepository,
-    ImageRepository imageRepository,
+    IUserRepository userRepository,
+    IImageRepository imageRepository,
     IMapper mapper) : base(userRepository, mapper)
   {
     _imageService = new ImageService(imageRepository, mapper);
   }
 
-  public async Task<int> CreateUser(RegisterUserDto registerUser)
+  public async Task<UserDto> CreateUser(RegisterUserDto registerUser)
   {
     await ValidateUserIsExistByEmail(registerUser.Email);
 
     var user = _mapper.Map<User>(registerUser);
+    var authData = EncodeUserPassword(registerUser.Password);
+
+    user.Salt = authData.Salt;
+    user.Password = authData.Password;
 
     await Create(user);
-    return (await _repository.FirstAsync(x => x.Email == user.Email)).Id;
+
+    var createdUser = await Get(user.Email);
+    return _mapper.Map<UserDto>(createdUser);
   }
 
   public async Task Delete(int userId)
@@ -40,8 +47,13 @@ public class UserService : BaseService<UserRepository, User>, IUserService
   public async Task<User> ChangePassword(int userId, string newPassword)
   {
     var userEntity = await Get(userId);
+    var authData = EncodeUserPassword(newPassword);
 
-    userEntity.Password = newPassword;
+    if (SecurityHelper.ValidatePassword(newPassword, userEntity.Password, userEntity.Salt))
+      throw CustomException.RepeatPasswordException();
+
+    userEntity.Salt = authData.Salt;
+    userEntity.Password = authData.Password;
 
     await Update(userEntity);
     return userEntity;
@@ -109,6 +121,20 @@ public class UserService : BaseService<UserRepository, User>, IUserService
 
   public async Task<IEnumerable<User>> GetAll() =>
     await _repository.GetAllAsync();
+
+  private static (string Salt, string Password) EncodeUserPassword(string password)
+  {
+    var salt = SecurityHelper.GetRandomBytes();
+
+    var saltPassword = Convert.ToBase64String(salt);
+    var hashedPassword = SecurityHelper.HashPassword(password, salt);
+
+    return (saltPassword, hashedPassword);
+  }
+
+  private static void DecodeUserPassword(string salt, string password, string newPassword)
+  {
+  }
 
   private async Task ValidateUserIsExistByEmail(string email)
   {

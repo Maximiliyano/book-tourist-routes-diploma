@@ -1,16 +1,16 @@
 using System.Net;
 using AutoMapper;
+using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
-using BookTouristRoutes.BLL.Repositories;
 using BookTouristRoutes.BLL.Services.Base;
 using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Services;
 
-public class ImageService : BaseService<ImageRepository, Image>, IImageService
+public class ImageService : BaseService<IImageRepository, Image>, IImageService
 {
-  public ImageService(ImageRepository imageRepository, IMapper mapper) : base(imageRepository, mapper)
+  public ImageService(IImageRepository imageRepository, IMapper mapper) : base(imageRepository, mapper)
   {
   }
 
@@ -30,7 +30,7 @@ public class ImageService : BaseService<ImageRepository, Image>, IImageService
 
   public async Task Remove(Image image)
   {
-    await _repository.RemoveImage(image);
+    await _repository.RemoveImageAsync(image);
   }
 
   public async Task<Image> GetEntityByUrl(string url) =>
