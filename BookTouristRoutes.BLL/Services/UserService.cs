@@ -26,6 +26,11 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
   {
     await ValidateUserIsExistByEmail(registerUser.Email);
 
+    if (string.IsNullOrEmpty(registerUser.Email) || string.IsNullOrEmpty(registerUser.Password) || string.IsNullOrEmpty(registerUser.Name))
+    {
+      throw new CustomException("Required fields is empty!", HttpStatusCode.BadRequest);
+    }
+
     var user = _mapper.Map<User>(registerUser);
     var authData = EncodeUserPassword(registerUser.Password);
 
@@ -64,6 +69,8 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var userEntity = await Get(userDto.Id);
 
     userEntity.Email = userDto.Email;
+    userEntity.Roles = userDto.Role;
+    userEntity.Name = userDto.Name;
 
     if (!string.IsNullOrEmpty(userDto.Avatar))
     {
