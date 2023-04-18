@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "eSh+4iYVZ/SBZv3yiZIhA1qSqcHP5OZQ7wY9ils1rjQufB9fqq6C/eR/4RKphYPnmTCNyPnVq1YgzXNPslChQg==",
+  "dgSpecHash": "RsrdvWrfLTLVKJa+wnrcjgouaN7We7XOA2vEibx9iOM5Rz+NTyeUj6ikNkh4NkBNmEnkWB+BsYbm+tuOfrI4cQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.DAL\\BookTouristRoutes.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxim\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

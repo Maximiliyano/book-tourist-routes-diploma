@@ -7,6 +7,16 @@ namespace BookTouristRoutes.Common.Builders;
 
 public static class GlobalBuilder
 {
+  public static User BuildUser(int userId, string email, string hashedPassword, string salt, string name) =>
+    new()
+    {
+      Id = userId,
+      Email = email,
+      Password = hashedPassword,
+      Salt = salt,
+      Name = name
+    };
+
   public static UserDto BuildUserDto(int id, string name, string? avatarUrl, DateTime createdAt, DateTime updatedAt, string email) =>
     new()
     {
