@@ -50,7 +50,7 @@ public class ImageService : BaseService<IImageRepository, Image>, IImageService
       throw new CustomException("Image with the same email is exist in system!", HttpStatusCode.BadRequest);
   }
 
-  private async Task ValidateImageIsNotExistById(int userId)
+  public async Task ValidateImageIsNotExistById(int userId)
   {
     var image = await GetById(userId);
 

@@ -1,6 +1,6 @@
 using BookTouristRoutes.BLL.Interfaces.Services;
-using BookTouristRoutes.Common.Auth;
 using BookTouristRoutes.Common.BaseEntities;
+using BookTouristRoutes.Common.Builders;
 using BookTouristRoutes.Common.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,14 +34,7 @@ public class RegisterController : BaseController
     var createdUserDto = await _userService.CreateUser(registerUser);
     var token = await _authService.GenerateAccessToken(createdUserDto.Id, createdUserDto.Name, createdUserDto.Email);
 
-    var result = BuildAuthUserDto(createdUserDto, token);
-    return CreatedAtAction(nameof(Create), new { id = createdUserDto.Id }, result);
+    var result = GlobalBuilder.BuildAuthUserDto(createdUserDto, token);
+    return CreatedAtAction(nameof(Create), result);
   }
-
-  private static AuthUserDto BuildAuthUserDto(UserDto userDto, AccessTokenDto token) =>
-    new ()
-    {
-      User = userDto,
-      Token = token
-    };
 }

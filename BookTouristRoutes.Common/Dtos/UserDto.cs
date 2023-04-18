@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using BookTouristRoutes.Common.BaseEntities;
+using BookTouristRoutes.Common.Enums;
 
 namespace BookTouristRoutes.Common.Dtos;
 
@@ -15,4 +17,6 @@ public class UserDto : BaseModel
   [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email format")]
   [MaxLength(64)]
   public string Email { get; set; }
+
+  public UserRoles Role { get; set; }
 }

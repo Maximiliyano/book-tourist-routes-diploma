@@ -102,7 +102,7 @@ namespace BookTouristRoutes.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Roles")
+                    b.Property<int>("Role")
                         .HasColumnType("int");
 
                     b.Property<string>("Salt")
