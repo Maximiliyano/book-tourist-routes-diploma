@@ -364,8 +364,8 @@ healthchecksdb
 BookTouristRoutes.Common/obj
 BookTouristRoutes.Common/bin
 
-BookTouristRoutes.Api/obj
-BookTouristRoutes.Api/bin
+BookTouristRoutes.Api/obj/Debug/net7.0/
+BookTouristRoutes.Api/bin/Debug/net7.0/
 
 !/.gitignore
 bin
