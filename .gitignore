@@ -39,3 +39,15 @@ msbuild.wrn
 
 *.dll
 *.pdb
+
+BookTouristRoutes.Api/bin/
+BookTouristRoutes.Api/obj/
+
+BookTouristRoutes.BLL/bin/
+BookTouristRoutes.BLL/obj/
+
+BookTouristRoutes.Common/bin/
+BookTouristRoutes.Common/obj/
+
+BookTouristRoutes.DAL/bin/
+BookTouristRoutes.DAL/obj/
