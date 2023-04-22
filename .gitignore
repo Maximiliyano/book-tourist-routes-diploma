@@ -378,3 +378,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
+/BookTouristRoutes.Common/bin/
+/BookTouristRoutes.Common/obj/
