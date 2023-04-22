@@ -380,3 +380,21 @@ healthchecksdb
 
 /BookTouristRoutes.Common/bin/
 /BookTouristRoutes.Common/obj/
+
+!/.gitignore
+bin
+obj
+*.suo
+*.user
+packages
+dist
+DeployPackage
+.vs
+.sonarqube
+*.vspscc
+*.orig
+package-lock.json
+/POC/
+/.idea/
+*.bak
+/.license-checking/licenses.json
