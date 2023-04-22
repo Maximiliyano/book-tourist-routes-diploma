@@ -35,4 +35,7 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
-backend/FoodSimpleWebApi/obj
+.obj/
+
+*.dll
+*.pdb
