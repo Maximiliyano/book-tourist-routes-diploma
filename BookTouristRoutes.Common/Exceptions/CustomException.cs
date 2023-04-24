@@ -6,6 +6,7 @@ public class CustomException : Exception
 {
   private const string EntityNotFoundMessage = "{0} with id: {1} not found";
   private const string InvalidTokenMessage = "Invalid {0} token {1}";
+  private const string InvalidRepeatMessage = "{0} with the same {1} is exist in system!";
 
   public CustomException(string message, HttpStatusCode httpStatusCode, object data = null)
     : this( message, null, httpStatusCode, data ?? message) { }
@@ -31,6 +32,9 @@ public class CustomException : Exception
 
   public static CustomException ExpiredRefreshTokenException() =>
     new ("Refresh token expired.", HttpStatusCode.Forbidden);
+
+  public static CustomException RepeatException<TKey>(string entityName, TKey key) =>
+    new(string.Format(InvalidRepeatMessage, entityName, key), HttpStatusCode.BadRequest);
 
   public HttpStatusCode StatusCode { get; set;}
 
