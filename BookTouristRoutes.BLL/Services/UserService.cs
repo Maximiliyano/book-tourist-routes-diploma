@@ -139,16 +139,12 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     return (saltPassword, hashedPassword);
   }
 
-  private static void DecodeUserPassword(string salt, string password, string newPassword)
-  {
-  }
-
   private async Task ValidateUserIsExistByEmail(string email)
   {
     var user = await _repository.GetByEmailAsync(email);
 
     if (user is not null)
-      throw new CustomException("User with the same email is exist in system!", HttpStatusCode.BadRequest);
+      throw CustomException.RepeatException(nameof(user), email);
   }
 
   private static Image BuildImageEntity(string url) =>

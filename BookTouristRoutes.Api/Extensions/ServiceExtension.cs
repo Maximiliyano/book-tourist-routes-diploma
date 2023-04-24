@@ -5,11 +5,8 @@ using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.BLL.JWT;
 using BookTouristRoutes.BLL.Repositories;
-using BookTouristRoutes.BLL.Repositories.Base;
 using BookTouristRoutes.BLL.Services;
-using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.MappingProfiles;
-using BookTouristRoutes.Common.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
@@ -22,6 +19,7 @@ public static class ServiceExtension
     service.AddScoped<JwtIssuerOptions>();
     service.AddScoped<IJwtFactory, JwtFactory>();
 
+    service.AddScoped<IRouteService, RouteService>();
     service.AddScoped<IUserService, UserService>();
     service.AddScoped<IImageService, ImageService>();
     service.AddScoped<IAuthService, AuthService>();
@@ -29,13 +27,10 @@ public static class ServiceExtension
 
   public static void RegisterRepositories(this IServiceCollection service)
   {
+    service.AddScoped<IRouteRepository, RouteRepository>();
     service.AddScoped<IUserRepository, UserRepository>();
     service.AddScoped<IImageRepository, ImageRepository>();
     service.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
-
-    service.AddScoped<Repository<UserDto>>();
-    service.AddScoped<Repository<Image>>();
-    service.AddScoped<Repository<RefreshToken>>();
   }
 
   public static void RegisterAutoMapper(this IServiceCollection services)

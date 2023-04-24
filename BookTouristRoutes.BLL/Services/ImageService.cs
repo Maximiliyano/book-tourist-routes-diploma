@@ -1,4 +1,3 @@
-using System.Net;
 using AutoMapper;
 using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
@@ -44,13 +43,13 @@ public class ImageService : BaseService<IImageRepository, Image>, IImageService
 
   private async Task ValidateImageIsExistByUrl(string url)
   {
-    var user = await GetByUrl(url);
+    var image = await GetByUrl(url);
 
-    if (user is not null)
-      throw new CustomException("Image with the same email is exist in system!", HttpStatusCode.BadRequest);
+    if (image is not null)
+      throw CustomException.RepeatException(nameof(image), url);
   }
 
-  public async Task ValidateImageIsNotExistById(int userId)
+  private async Task ValidateImageIsNotExistById(int userId)
   {
     var image = await GetById(userId);
 
