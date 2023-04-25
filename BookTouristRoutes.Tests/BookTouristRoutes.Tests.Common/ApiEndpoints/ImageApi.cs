@@ -4,7 +4,7 @@ using RestSharp;
 
 namespace BookTouristRoutes.Tests.Common.ApiEndpoints;
 
-public class ImageApi : AppBaseApi
+public class ImageApi : BaseApi
 {
   public ImageApi() : base("api/images")
   {

@@ -7,6 +7,7 @@ public interface IRouteService
 {
   Task<RouteDto> CreateRoute(Route route);
   Task<Route> Update(RouteDto routeDto);
+  Task Delete(int routeId);
   Task<IEnumerable<Route>> Search(string destination, DateTime? startDate, decimal? price);
   Task<int> GetAvailableSeats(int routeId);
   Task<int> GetBookedSeats(int routeId);

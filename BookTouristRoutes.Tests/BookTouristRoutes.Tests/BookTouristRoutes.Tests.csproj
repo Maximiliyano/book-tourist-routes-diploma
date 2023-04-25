@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\BookTouristRoutes.Common\BookTouristRoutes.Common.csproj" />
       <ProjectReference Include="..\BookTouristRoutes.Tests.Common\BookTouristRoutes.Tests.Common.csproj" />
     </ItemGroup>
 

@@ -16,7 +16,7 @@ public class UserHelper
     _registerApi = new RegisterApi();
   }
 
-  public async Task<RegisterUserDto> Create(
+  public async Task<RegisterUserDto?> Create(
     string? name = null,
     string? avatar = null,
     string? email  = null,
@@ -26,7 +26,7 @@ public class UserHelper
     var userDto = (await _registerApi.Create(registerUserDto)).Data?.User;
 
     if (userDto is null)
-      throw new InvalidOperationException($"Error creation model: {userDto} is not exist!");
+      return null;
 
     registerUserDto.Id = userDto.Id;
     return registerUserDto;

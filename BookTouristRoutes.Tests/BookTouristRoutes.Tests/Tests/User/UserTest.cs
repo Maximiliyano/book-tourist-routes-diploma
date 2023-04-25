@@ -1,13 +1,12 @@
 ﻿using BookTouristRoutes.Common.Builders;
 using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Helpers;
-using BookTouristRoutes.Common.Models;
 using BookTouristRoutes.Tests.Common.Extensions;
 using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
 
-namespace BookTouristRoutes.Tests.Tests;
+namespace BookTouristRoutes.Tests.Tests.User;
 
 public class UserTest
 {
@@ -68,20 +67,22 @@ public class UserTest
     // Assert
     using (new AssertionScope())
     {
-      user.Should().BeEquivalentTo(_user);
+      user.Should().BeEquivalentTo(_user, o =>
+        o.Excluding(x => x.Password));
     }
   }
 
   [Test]
-  public async Task GetUserByName_ReturnUser()
+  public async Task GetUserByEmail_ReturnUser()
   {
     // Act
-    var user = await _userHelper.Get(_user.Name);
+    var user = await _userHelper.Get(_user.Email);
 
     // Assert
     using (new AssertionScope())
     {
-      user.Should().BeEquivalentTo(_user);
+      user.Should().BeEquivalentTo(_user, o => o
+        .Excluding(x => x.Password));
     }
   }
 
@@ -126,7 +127,7 @@ public class UserTest
     }
   }
 
-  private async Task<User?> UpdateUserName(string newName)
+  private async Task<BookTouristRoutes.Common.Models.User?> UpdateUserName(string newName)
   {
     var userDto = GlobalBuilder.BuildUserDto(_user.Id, newName, _user.Avatar, _user.CreatedAt, _user.UpdatedAt, _user.Email);
     return await _userHelper.Update(userDto);

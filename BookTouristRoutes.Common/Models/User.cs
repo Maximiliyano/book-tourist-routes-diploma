@@ -13,7 +13,7 @@ public class User : BaseModel
 
   public string Salt { get; set; }
 
-  public UserRoles Roles { get; set; }
+  public UserRoles Role { get; set; }
 
   public Image Avatar { get; set; }
 

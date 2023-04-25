@@ -75,4 +75,11 @@ public class RouteController : BaseController
   {
     return Ok(await _routeService.Get(routeName));
   }
+
+  [HttpDelete("remove/{routeId:int}")]
+  public async Task<IActionResult> Delete([FromRoute] int routeId)
+  {
+    await _routeService.Delete(routeId);
+    return Ok();
+  }
 }
