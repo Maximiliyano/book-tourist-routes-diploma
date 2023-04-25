@@ -4,7 +4,7 @@ using RestSharp;
 
 namespace BookTouristRoutes.Tests.Common.ApiEndpoints;
 
-public class RegisterApi : AppBaseApi
+public class RegisterApi : BaseApi
 {
   public RegisterApi() : base("api/register")
   {

@@ -4,7 +4,7 @@ using RestSharp;
 
 namespace BookTouristRoutes.Tests.Common.ApiEndpoints;
 
-public class AuthApi : AppBaseApi
+public class AuthApi : BaseApi
 {
   public AuthApi() : base("api/authorization")
   {

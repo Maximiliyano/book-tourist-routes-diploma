@@ -29,7 +29,7 @@ public class UserController : BaseController
   }
 
   [HttpGet("details")]
-  public async Task<IActionResult> GetByName([FromQuery] string userEmail)
+  public async Task<IActionResult> GetByEmail([FromQuery] string userEmail)
   {
     return Ok(await _userService.Get(userEmail));
   }

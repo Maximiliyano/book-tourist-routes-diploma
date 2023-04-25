@@ -65,7 +65,7 @@ public static class ModelBuilderExtensions
           .RuleFor(u => u.Salt, f => Convert.ToBase64String(SecurityHelper.GetRandomBytes()))
           .RuleFor(u => u.Password, (f, u) => SecurityHelper.HashPassword(f.Internet.Password(12), Convert.FromBase64String(u.Salt)))
           .RuleFor(u => u.AvatarId, f => f.PickRandom(avatars).Id)
-          .RuleFor(u => u.Roles, f => f.PickRandom<UserRoles>())
+          .RuleFor(u => u.Role, f => f.PickRandom<UserRoles>())
           .RuleFor(pi => pi.CreatedAt, f => DateTime.Now)
           .RuleFor(pi => pi.UpdatedAt, f => DateTime.Now);
 

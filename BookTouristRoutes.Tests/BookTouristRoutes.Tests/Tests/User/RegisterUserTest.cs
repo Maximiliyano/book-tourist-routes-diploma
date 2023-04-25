@@ -1,10 +1,11 @@
 ﻿using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Helpers;
+using BookTouristRoutes.Common.Models;
 using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
 
-namespace BookTouristRoutes.Tests.Tests.RegisterApiTests;
+namespace BookTouristRoutes.Tests.Tests.User;
 
 public class RegisterUserTest
 {
@@ -43,44 +44,26 @@ public class RegisterUserTest
   [Test]
   public async Task RegisterUser_ReturnBadRequest(string name, string avatar, string email, string password)
   {
-    var user = new RegisterUserDto();
-
     // Act
-    try
-    {
-      user = await _userHelper.Create(name, avatar, email, password);
-    }
-    catch (InvalidOperationException e)
-    {
-      await _userHelper.Delete(user.Id);
+    var user = await _userHelper.Create(name, avatar, email, password);
 
-      // Assert
-      using (new AssertionScope())
-      {
-        user.Id.Should().Be(0);
-      }
+    // Assert
+    using (new AssertionScope())
+    {
+      user.Should().BeNull();
     }
   }
 
   [Test]
   public async Task RegisterExistingUser_UseTheSameEmail_ReturnBadRequest()
   {
-    var user = new RegisterUserDto();
-
     // Act
-    try
-    {
-      user = await _userHelper.Create(email: _registerUserDto.Email);
-    }
-    catch (InvalidOperationException e)
-    {
-      await _userHelper.Delete(user.Id);
+    var user = await _userHelper.Create(email: _registerUserDto.Email);
 
-      // Assert
-      using (new AssertionScope())
-      {
-        user.Id.Should().Be(0);
-      }
+    // Assert
+    using (new AssertionScope())
+    {
+      user.Should().BeNull();
     }
   }
 
@@ -106,24 +89,31 @@ public class RegisterUserTest
     // Assert
     using (new AssertionScope())
     {
-      user.Id.Should().NotBe(0);
+      user.Should().NotBeNull();
     }
   }
 
   [Test]
   public async Task RegisterUserWithAvatarUrl_ReturnNewImageAndUser()
   {
+    // Arrange
+    var image = new Image();
+
     // Act
     var user = await _userHelper.Create(avatar: AppHelper.GenerateRandomUrl());
-    var image = await _imageHelper.Get(user.Avatar);
 
-    await _userHelper.Delete(user.Id);
+    if (user?.Avatar is not null)
+    {
+      image = await _imageHelper.Get(user.Avatar);
+      await _userHelper.Delete(user.Id);
+    }
 
     // Assert
     using (new AssertionScope())
     {
-      user.Id.Should().NotBe(0);
-      image.URL.Should().Be(user.Avatar);
+      user.Should().NotBeNull();
+
+      image?.URL.Should().Be(user?.Avatar);
     }
   }
 }

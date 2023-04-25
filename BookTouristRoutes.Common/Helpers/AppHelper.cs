@@ -23,7 +23,7 @@ public class AppHelper
 
   public static string GenerateRandomName()
   {
-    return $"{RandomPrefix}{RandomizeCharacters(7)}";
+    return $"{RandomPrefix}{GenerateRandomizeCharacters(7)}";
   }
 
   public static string GenerateRandomEmail()
@@ -41,7 +41,7 @@ public class AppHelper
     return $"{username}@{domain}.{tld}";
   }
 
-  private static string RandomizeCharacters(int lenght)
+  public static string GenerateRandomizeCharacters(int lenght)
   {
     const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -52,5 +52,11 @@ public class AppHelper
     }
 
     return new string(stringChars);
+  }
+
+  public static int GenerateRandomNumber(int min, int max)
+  {
+    var random = new Random();
+    return random.Next(min, max + 1);
   }
 }

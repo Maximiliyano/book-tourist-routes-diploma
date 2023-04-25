@@ -74,6 +74,16 @@ public class RouteService : BaseService<IRouteRepository, Route>, IRouteService
     return route.BookedSeats;
   }
 
+  public async Task Delete(int routeId)
+  {
+    var route = await Get(routeId);
+
+    if (route is null)
+      throw CustomException.EntityNotFound(nameof(route), routeId);
+
+    await Delete(route);
+  }
+
   public async Task<IEnumerable<Route>> GetAll() =>
     await _repository.GetAllAsync();
 

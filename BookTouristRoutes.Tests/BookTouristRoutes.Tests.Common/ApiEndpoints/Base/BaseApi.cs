@@ -1,3 +1,4 @@
+using BookTouristRoutes.Tests.Common.Helpers;
 using RestSharp;
 
 namespace BookTouristRoutes.Tests.Common.ApiEndpoints.Base;
@@ -10,10 +11,10 @@ public abstract class BaseApi
 
   public const string ContentType = "application/json";
 
-  protected BaseApi(string baseUrl, string serviceUrl)
+  protected BaseApi(string serviceUrl)
   {
     _serviceUrl = serviceUrl;
-    _client = new RestClient(baseUrl);
+    _client = new RestClient(ConfigurationHelper.AppUrl);
   }
 
   #region Requests

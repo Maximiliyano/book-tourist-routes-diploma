@@ -46,6 +46,10 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
   public async Task Delete(int userId)
   {
     var user = await Get(userId);
+
+    if (user is null)
+      throw CustomException.EntityNotFound(nameof(user), userId);
+
     await Delete(user);
   }
 
@@ -69,7 +73,7 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var userEntity = await Get(userDto.Id);
 
     userEntity.Email = userDto.Email;
-    userEntity.Roles = userDto.Role;
+    userEntity.Role = userDto.Role;
     userEntity.Name = userDto.Name;
 
     if (!string.IsNullOrEmpty(userDto.Avatar))

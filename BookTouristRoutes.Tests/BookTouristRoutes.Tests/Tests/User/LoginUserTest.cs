@@ -3,7 +3,7 @@ using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
 
-namespace BookTouristRoutes.Tests.Tests.AuthApiTests;
+namespace BookTouristRoutes.Tests.Tests.User;
 
 public class LoginUserTest
 {

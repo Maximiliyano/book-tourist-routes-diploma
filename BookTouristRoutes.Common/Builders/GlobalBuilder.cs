@@ -7,6 +7,23 @@ namespace BookTouristRoutes.Common.Builders;
 
 public static class GlobalBuilder
 {
+  public static RouteDto BuildRouteDto(
+    string? name, string? description,
+    DateTime? startDate, DateTime? endDate,
+    int? seats, int? bookedSeats,
+    decimal? price, string? destination) =>
+      new ()
+      {
+        Name = name ?? AppHelper.GenerateRandomName(),
+        Description = description ?? AppHelper.GenerateRandomizeCharacters(7),
+        StartDate = startDate ?? DateTime.Now,
+        EndDate = endDate ?? DateTime.Now.AddDays(3),
+        Seats = seats ?? AppHelper.GenerateRandomNumber(10, 100),
+        BookedSeats = bookedSeats ?? AppHelper.GenerateRandomNumber(10, 100),
+        Price = price ?? AppHelper.GenerateRandomNumber(0, 1000),
+        Destination = destination ?? AppHelper.GenerateRandomizeCharacters(10)
+      };
+
   public static User BuildUser(int userId, string email, string hashedPassword, string salt, string name) =>
     new()
     {
