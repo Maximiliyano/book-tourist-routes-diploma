@@ -23,45 +23,32 @@ public class RouteHelper
     return (await _routeApi.Create(buildRouteModel)).Data;
   }
 
-  public async Task<RouteEntity> Update(RouteEntity route)
-  {
-    return (await _routeApi.Update(route)).Data;
-  }
+  public async Task<RouteEntity> Update(RouteEntity route) =>
+    (await _routeApi.Update(route)).Data;
 
-  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate = null, decimal? price = null)
-  {
-    return (await _routeApi.Search(destination, startDate, price)).Data;
-  }
+  public async Task<IEnumerable<RouteEntity>> Search(
+    string destination,
+    DateTime? startDate = null,
+    decimal? price = null) =>
+      (await _routeApi.Search(destination, startDate, price)).Data;
 
-  public async Task<int> GetAvailableSeats(int routeId)
-  {
-    return (await _routeApi.GetAvailableSeats(routeId)).Data;
-  }
+  public async Task<int> GetAvailableSeats(int routeId) =>
+    (await _routeApi.GetAvailableSeats(routeId)).Data;
 
-  public async Task<int> GetBookedSeats(int routeId)
-  {
-    return (await _routeApi.GetBookedSeats(routeId)).Data;
-  }
+  public async Task<int> GetBookedSeats(int routeId) =>
+    (await _routeApi.GetBookedSeats(routeId)).Data;
 
-  public async Task<int> GetSeatsCapacity(int routeId)
-  {
-    return (await _routeApi.GetSeatsCapacity(routeId)).Data;
-  }
+  public async Task<int> GetSeatsCapacity(int routeId) =>
+    (await _routeApi.GetSeatsCapacity(routeId)).Data;
 
-  public async Task<IEnumerable<RouteEntity>> GetAll()
-  {
-    return (await _routeApi.GetAll()).Data;
-  }
+  public async Task<IEnumerable<RouteEntity>> GetAll() =>
+    (await _routeApi.GetAll()).Data;
 
-  public async Task<RouteEntity> GetById(int routeId)
-  {
-    return (await _routeApi.GetById(routeId)).Data;
-  }
+  public async Task<RouteEntity> GetById(int routeId) =>
+    (await _routeApi.GetById(routeId)).Data;
 
-  public async Task<RouteEntity> GetByName(string routeName)
-  {
-    return (await _routeApi.GetByName(routeName)).Data;
-  }
+  public async Task<RouteEntity> GetByName(string routeName) =>
+    (await _routeApi.GetByName(routeName)).Data;
 
   public async Task Delete(int routeId) =>
     await _routeApi.Delete(routeId);

@@ -10,26 +10,39 @@ namespace BookTouristRoutes.BLL.Services;
 
 public class BookingService : BaseService<IBookingRepository, Booking>, IBookingService
 {
-  public BookingService(IBookingRepository repository, IMapper mapper) : base(repository, mapper)
+  private readonly IRouteService _routeService;
+  private readonly IUserService _userService;
+
+  public BookingService(
+    IRouteService routeService,
+    IUserService userService,
+    IBookingRepository repository,
+    IMapper mapper) : base(repository, mapper)
   {
+    _routeService = routeService;
+    _userService = userService;
   }
 
   public async Task<int> CreateBooking(Booking model)
   {
-    model.Uid = new Guid();
+    await ValidateBookingRouteId(model.RouteId);
+    await ValidateBookingUserId(model.UserId);
+
+    model.Uid = Guid.NewGuid();
     await Create(model);
 
-    await ValidateCreationModel(model);
+    await ValidateBookingUid(model.Uid);
 
     return (await GetBooking(model.Uid)).Id;
   }
 
   public async Task<Booking> UpdateBooking(Booking model)
   {
+    await ValidateBookingRouteId(model.RouteId);
+    await ValidateBookingUserId(model.UserId);
+    await ValidateBookingUid(model.Uid);
+
     await Update(model);
-
-    await ValidateCreationModel(model);
-
     return await GetBooking(model.Id);
   }
 
@@ -45,7 +58,7 @@ public class BookingService : BaseService<IBookingRepository, Booking>, IBooking
 
   public async Task<decimal> CalculatePrice(DateTime startDate, DateTime endDate, int seats, decimal price)
   {
-    if (startDate <= endDate || seats <= 0 || price <= 0)
+    if (endDate <= startDate || seats <= 0 || price <= 0)
       throw new CustomException("Invalid parameters provided!", HttpStatusCode.BadRequest);
 
     var countDays = (endDate - startDate).Days;
@@ -64,11 +77,27 @@ public class BookingService : BaseService<IBookingRepository, Booking>, IBooking
   private async Task<Booking?> GetBooking(Guid uid) =>
     await _repository.FirstOrDefaultAsync(x => x.Uid == uid);
 
-  private async Task ValidateCreationModel(Booking model)
+  private async Task ValidateBookingRouteId(int bookingRouteId)
   {
-    var entity = await GetBooking(model.Uid);
+    var routeEntity = await _routeService.Get(bookingRouteId);
+
+    if (routeEntity is null)
+      throw CustomException.EntityNotFound(nameof(routeEntity), bookingRouteId);
+  }
+
+  private async Task ValidateBookingUserId(int bookingUserId)
+  {
+    var userEntity = await _userService.Get(bookingUserId);
+
+    if (userEntity is null)
+      throw CustomException.EntityNotFound(nameof(userEntity), bookingUserId);
+  }
+
+  private async Task ValidateBookingUid(Guid modelUid)
+  {
+    var entity = await GetBooking(modelUid);
 
     if (entity is null)
-      throw new CustomException($"Error creation model: {model}!", HttpStatusCode.BadRequest);
+      throw new CustomException($"Error creation model: {modelUid}!", HttpStatusCode.BadRequest);
   }
 }

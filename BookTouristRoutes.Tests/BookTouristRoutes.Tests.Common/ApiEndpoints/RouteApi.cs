@@ -18,7 +18,7 @@ public class RouteApi : BaseApi
     return await ExecuteRequest<RouteEntity>(request);
   }
 
-  public async Task<RestResponse<RouteEntity?>> Update(RouteEntity route)
+  public async Task<RestResponse<RouteEntity>> Update(RouteEntity route)
   {
     var request = CreatePutRequest(string.Empty, route);
     return await ExecuteRequest<RouteEntity>(request);

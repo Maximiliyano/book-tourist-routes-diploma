@@ -102,10 +102,10 @@ public class UserTest
       _user.Password.Should().NotBe(newPassword);
 
       userWithUpdatedPassword.Should().BeEquivalentTo(userWithOldPassword, o => o
-        .Excluding(x =>
-            x.UpdatedAt,
-            x => x.Password,
-            x => x.Salt));
+        .Excluding(
+          x => x.UpdatedAt,
+          x => x.Password,
+          x => x.Salt));
     }
   }
 

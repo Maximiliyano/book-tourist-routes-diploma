@@ -5,8 +5,8 @@ namespace BookTouristRoutes.BLL.Interfaces.Services;
 public interface IRouteService
 {
   Task<RouteEntity> CreateRoute(RouteEntity routeEntity);
-  Task<RouteEntity> Update(RouteEntity routeEntityDto);
-  Task Delete(int routeId);
+  Task<RouteEntity> UpdateRoute(RouteEntity routeEntityDto);
+  Task DeleteRoute(int routeId);
   Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price);
   Task<int> GetAvailableSeats(int routeId);
   Task<int> GetBookedSeats(int routeId);
