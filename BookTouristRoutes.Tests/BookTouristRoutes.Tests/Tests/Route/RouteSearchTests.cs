@@ -35,8 +35,6 @@ public class RouteSearchTests
     // Act
     var routes = await _routeHelper.GetAll();
 
-    await _routeHelper.Delete(_route.Id);
-
     // Assert
     using (new AssertionScope())
     {
@@ -58,7 +56,7 @@ public class RouteSearchTests
     // Assert
     using (new AssertionScope())
     {
-      routes.Should().BeEmpty();
+      routes.Should().NotContain(x => x.Id == _route.Id);
     }
   }
 

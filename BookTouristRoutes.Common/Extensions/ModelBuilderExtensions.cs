@@ -29,6 +29,8 @@ public static class ModelBuilderExtensions
     var previewImages = GenerateRandomPreviewImages(lastImageId);
 
     var users = GenerateRandomUsers(avatars);
+    // TODO generateRandomRoutes
+    // TODO generateRandomBooking
 
     modelBuilder.Entity<Image>().HasData(avatars.Concat(previewImages));
     modelBuilder.Entity<User>().HasData(users);

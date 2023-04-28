@@ -23,21 +23,24 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     return entity;
   }
 
-  public async Task<RouteEntity> Update(RouteEntity routeEntityDto)
+  public async Task<RouteEntity> UpdateRoute(RouteEntity routeEntityDto)
   {
-    var actualRoute = await Get(routeEntityDto.Id);
+    var entity = await Get(routeEntityDto.Id);
 
-    actualRoute.Name = routeEntityDto.Name;
-    actualRoute.Description = routeEntityDto.Description;
-    actualRoute.Destination = routeEntityDto.Destination;
-    actualRoute.Price = routeEntityDto.Price;
-    actualRoute.Seats = routeEntityDto.Seats;
-    actualRoute.BookedSeats = routeEntityDto.BookedSeats;
-    actualRoute.StartDate = routeEntityDto.StartDate;
-    actualRoute.EndDate = routeEntityDto.EndDate;
+    if (entity is null)
+      throw CustomException.EntityNotFound(nameof(entity), routeEntityDto.Id);
 
-    await Update(actualRoute);
-    return actualRoute;
+    entity.Name = routeEntityDto.Name;
+    entity.Description = routeEntityDto.Description;
+    entity.Destination = routeEntityDto.Destination;
+    entity.Price = routeEntityDto.Price;
+    entity.Seats = routeEntityDto.Seats;
+    entity.BookedSeats = routeEntityDto.BookedSeats;
+    entity.StartDate = routeEntityDto.StartDate;
+    entity.EndDate = routeEntityDto.EndDate;
+
+    await Update(entity);
+    return entity;
   }
 
   public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price) =>
@@ -73,7 +76,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     return route.BookedSeats;
   }
 
-  public async Task Delete(int routeId)
+  public async Task DeleteRoute(int routeId)
   {
     var route = await Get(routeId);
 

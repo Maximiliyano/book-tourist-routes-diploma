@@ -32,7 +32,7 @@ public class UserHelper
     return registerUserDto;
   }
 
-  public async Task<IEnumerable<User>?> GetAll() =>
+  public async Task<IEnumerable<User>> GetAll() =>
     (await _userApi.GetAll()).Data;
 
   public async Task<User?> Get(int userId) =>

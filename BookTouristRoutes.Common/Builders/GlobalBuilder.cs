@@ -1,5 +1,6 @@
 using BookTouristRoutes.Common.Auth;
 using BookTouristRoutes.Common.Dtos;
+using BookTouristRoutes.Common.Enums;
 using BookTouristRoutes.Common.Helpers;
 using BookTouristRoutes.Common.Models;
 
@@ -7,6 +8,22 @@ namespace BookTouristRoutes.Common.Builders;
 
 public static class GlobalBuilder
 {
+  public static Booking BuildBooking(
+    int routeId, int userId,
+    DateTime? startDate, DateTime? endDate,
+    BookingStatus? status,
+    decimal? price) =>
+      new ()
+      {
+        StartDate = startDate ?? DateTime.Now,
+        EndDate = endDate ?? DateTime.Now.AddDays(3),
+        Price = price ?? AppHelper.GenerateRandomNumber(0, 1000),
+        RouteId = routeId,
+        UserId = userId,
+        Status = status ?? RandomBookingStatus(),
+        Uid = Guid.Empty
+      };
+
   public static RouteEntity BuildRoute(
     string? name, string? description,
     DateTime? startDate, DateTime? endDate,
@@ -73,4 +90,12 @@ public static class GlobalBuilder
 
   public static AccessTokenDto BuildAccessTokenDto(AccessToken accessToken, string token) =>
     new (accessToken, token);
+
+  private static BookingStatus RandomBookingStatus()
+  {
+    var values = Enum.GetValues(typeof(BookingStatus));
+    var random = new Random();
+    return (BookingStatus)(values.GetValue(random.Next(values.Length)) ?? throw new InvalidOperationException(
+      $"Invalid values in entity: {nameof(BookingStatus)}"));
+  }
 }

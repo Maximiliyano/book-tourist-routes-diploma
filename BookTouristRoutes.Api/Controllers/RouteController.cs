@@ -33,7 +33,12 @@ public class RouteController : BaseController
   [HttpPut]
   public async Task<IActionResult> Update([FromBody] RouteEntity routeEntity)
   {
-    return Ok(await _routeService.Update(routeEntity));
+    if (!ModelState.IsValid)
+    {
+      return BadRequest();
+    }
+
+    return Ok(await _routeService.UpdateRoute(routeEntity));
   }
 
   [HttpGet("search/{destination}")]
@@ -81,7 +86,7 @@ public class RouteController : BaseController
   [HttpDelete("remove/{routeId:int}")]
   public async Task<IActionResult> Delete([FromRoute] int routeId)
   {
-    await _routeService.Delete(routeId);
+    await _routeService.DeleteRoute(routeId);
     return NoContent();
   }
 }

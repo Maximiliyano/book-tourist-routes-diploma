@@ -65,8 +65,8 @@ public class BookingController : BaseController
     return NoContent();
   }
 
-  [HttpGet]
-  public async Task<IActionResult> CalculatePrice(BookingFilterDto bookingFilterDto)
+  [HttpPost("calculatePrice")]
+  public async Task<IActionResult> CalculatePrice([FromBody] BookingFilterDto bookingFilterDto)
   {
     if (!ModelState.IsValid)
     {

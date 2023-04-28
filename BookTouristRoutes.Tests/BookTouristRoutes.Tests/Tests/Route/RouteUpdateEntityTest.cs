@@ -20,7 +20,7 @@ public class RouteUpdateEntityTest
   [SetUp]
   public async Task SetUp()
   {
-    _route = (RouteEntity)await _routeHelper.Create();
+    _route = await _routeHelper.Create();
   }
 
   [TearDown]
@@ -48,6 +48,7 @@ public class RouteUpdateEntityTest
   public async Task UpdateRouteWithExistingValue_ReturnTheSameObject()
   {
     // Act
+    _route.Name = AppHelper.GenerateRandomName();
     var result = await _routeHelper.Update(_route);
 
     // Assert
