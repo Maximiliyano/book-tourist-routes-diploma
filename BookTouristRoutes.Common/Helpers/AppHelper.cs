@@ -54,7 +54,7 @@ public class AppHelper
     return new string(stringChars);
   }
 
-  public static int GenerateRandomNumber(int min, int max)
+  public static int GenerateRandomNumber(int min = int.MinValue, int max = int.MaxValue)
   {
     var random = new Random();
     return random.Next(min, max + 1);

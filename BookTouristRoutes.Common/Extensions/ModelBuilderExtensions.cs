@@ -25,15 +25,15 @@ public static class ModelBuilderExtensions
 
   public static void Seed(this ModelBuilder modelBuilder)
   {
-    var avatars = GenerateRandomAvatars(out int lastImageId);
+    var avatars = GenerateRandomAvatars(out var lastImageId);
     var previewImages = GenerateRandomPreviewImages(lastImageId);
 
     var users = GenerateRandomUsers(avatars);
-    // TODO generateRandomRoutes
-    // TODO generateRandomBooking
+    var routes = GenerateRandomRoutes();
 
     modelBuilder.Entity<Image>().HasData(avatars.Concat(previewImages));
     modelBuilder.Entity<User>().HasData(users);
+    modelBuilder.Entity<RouteEntity>().HasData(routes);
   }
 
   private static ICollection<Image> GenerateRandomAvatars(out int lastImageId)
@@ -61,6 +61,26 @@ public static class ModelBuilderExtensions
           .RuleFor(pi => pi.UpdatedAt, f => DateTime.Now);
 
       return previewImagesFake.Generate(EntityCount);
+  }
+
+  private static IEnumerable<RouteEntity> GenerateRandomRoutes()
+  {
+    var routeId = 1;
+    var seats = AppHelper.GenerateRandomNumber(1, 10);
+
+    var testRouteFake = new Faker<RouteEntity>()
+      .RuleFor(r => r.Id, f => routeId++)
+      .RuleFor(r => r.Name, f => f.Address.City())
+      .RuleFor(r => r.Description, f => f.Commerce.ProductDescription())
+      .RuleFor(r => r.StartDate, f => DateTime.Now)
+      .RuleFor(r => r.EndDate, f => DateTime.Now.AddDays(5))
+      .RuleFor(r => r.Seats, f => seats)
+      .RuleFor(r => r.BookedSeats, f => f.Random.Int(0, seats))
+      .RuleFor(r => r.Price, f => f.Random.Decimal(1, 10000))
+      .RuleFor(r => r.Destination, f => f.Address.City());
+
+    var generatedRoutes = testRouteFake.Generate(EntityCount);
+    return generatedRoutes;
   }
 
   private static IEnumerable<User> GenerateRandomUsers(ICollection<Image> avatars)
