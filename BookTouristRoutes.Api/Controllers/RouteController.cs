@@ -1,6 +1,8 @@
+
+
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.Common.BaseEntities;
-using BookTouristRoutes.Common.Dtos;
+using BookTouristRoutes.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookTouristRoutes.Api.Controllers;
@@ -17,21 +19,21 @@ public class RouteController : BaseController
   }
 
   [HttpPost("new")]
-  public async Task<IActionResult> Create([FromBody] RouteDto route)
+  public async Task<IActionResult> Create([FromBody] RouteEntity routeEntity)
   {
     if (!ModelState.IsValid)
     {
       return BadRequest();
     }
 
-    var result = await _routeService.CreateRoute(route);
+    var result = await _routeService.CreateRoute(routeEntity);
     return CreatedAtAction(nameof(Create), result);
   }
 
   [HttpPut]
-  public async Task<IActionResult> Update([FromBody] RouteDto routeDto)
+  public async Task<IActionResult> Update([FromBody] RouteEntity routeEntity)
   {
-    return Ok(await _routeService.Update(routeDto));
+    return Ok(await _routeService.Update(routeEntity));
   }
 
   [HttpGet("search/{destination}")]
@@ -80,6 +82,6 @@ public class RouteController : BaseController
   public async Task<IActionResult> Delete([FromRoute] int routeId)
   {
     await _routeService.Delete(routeId);
-    return Ok();
+    return NoContent();
   }
 }

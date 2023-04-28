@@ -14,6 +14,13 @@ public static class ModelBuilderExtensions
   public static void Configure(this ModelBuilder modelBuilder)
   {
     modelBuilder.Entity<RefreshToken>().Ignore(t => t.IsActive);
+    modelBuilder.Entity<RouteEntity>()
+      .Property(b => b.Price)
+      .HasPrecision(10, 2);
+
+    modelBuilder.Entity<Booking>()
+      .Property(b => b.Price)
+      .HasPrecision(10, 2);
   }
 
   public static void Seed(this ModelBuilder modelBuilder)

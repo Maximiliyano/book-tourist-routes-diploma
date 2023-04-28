@@ -2,9 +2,9 @@
 
 public class BaseModel
 {
-  private DateTime _createdAt;
+  private readonly DateTime _createdAt;
 
-  public BaseModel()
+  protected BaseModel()
   {
     CreatedAt = UpdatedAt = DateTime.Now;
   }
@@ -14,7 +14,7 @@ public class BaseModel
   public DateTime CreatedAt
   {
     get => _createdAt;
-    set => _createdAt = (value == DateTime.MinValue) ? DateTime.Now : value;
+    init => _createdAt = (value == DateTime.MinValue) ? DateTime.Now : value;
   }
 
   public DateTime UpdatedAt { get; set; }

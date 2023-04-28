@@ -2,7 +2,7 @@ using BookTouristRoutes.Common.BaseEntities;
 
 namespace BookTouristRoutes.Common.Models;
 
-public class Route : BaseModel
+public class RouteEntity : BaseModel
 {
   public string Name { get; set; }
 
