@@ -1,5 +1,4 @@
 ﻿using BookTouristRoutes.Common.Builders;
-using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Models;
 using BookTouristRoutes.Tests.Common.ApiEndpoints;
 
@@ -14,22 +13,22 @@ public class RouteHelper
     _routeApi = new RouteApi();
   }
 
-  public async Task<Route?> Create(
+  public async Task<RouteEntity?> Create(
     string? name = null, string? description = null,
     DateTime? startDate = null, DateTime? endDate = null,
     int? seats = null, int? bookedSeats = null,
     decimal? price = null, string? destination = null)
   {
-    var buildRouteModel = GlobalBuilder.BuildRouteDto(name, description, startDate, endDate, seats, bookedSeats, price, destination);
+    var buildRouteModel = GlobalBuilder.BuildRoute(name, description, startDate, endDate, seats, bookedSeats, price, destination);
     return (await _routeApi.Create(buildRouteModel)).Data;
   }
 
-  public async Task<Route> Update(RouteDto route)
+  public async Task<RouteEntity> Update(RouteEntity route)
   {
     return (await _routeApi.Update(route)).Data;
   }
 
-  public async Task<IEnumerable<Route>> Search(string destination, DateTime? startDate = null, decimal? price = null)
+  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate = null, decimal? price = null)
   {
     return (await _routeApi.Search(destination, startDate, price)).Data;
   }
@@ -49,17 +48,17 @@ public class RouteHelper
     return (await _routeApi.GetSeatsCapacity(routeId)).Data;
   }
 
-  public async Task<IEnumerable<Route>> GetAll()
+  public async Task<IEnumerable<RouteEntity>> GetAll()
   {
     return (await _routeApi.GetAll()).Data;
   }
 
-  public async Task<Route> GetById(int routeId)
+  public async Task<RouteEntity> GetById(int routeId)
   {
     return (await _routeApi.GetById(routeId)).Data;
   }
 
-  public async Task<Route> GetByName(string routeName)
+  public async Task<RouteEntity> GetByName(string routeName)
   {
     return (await _routeApi.GetByName(routeName)).Data;
   }

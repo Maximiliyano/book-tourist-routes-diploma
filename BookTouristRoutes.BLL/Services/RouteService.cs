@@ -2,46 +2,45 @@ using AutoMapper;
 using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.BLL.Services.Base;
-using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Services;
 
-public class RouteService : BaseService<IRouteRepository, Route>, IRouteService
+public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteService
 {
   public RouteService(IRouteRepository routeRepository, IMapper mapper) : base(routeRepository, mapper)
   {
   }
 
-  public async Task<RouteDto> CreateRoute(Route route)
+  public async Task<RouteEntity> CreateRoute(RouteEntity routeEntity)
   {
-    await ValidateRouteIsExistByName(route.Name);
+    await ValidateRouteIsExistByName(routeEntity.Name);
 
-    await Create(route);
+    await Create(routeEntity);
 
-    var entity = await Get(route.Name);
-    return _mapper.Map<RouteDto>(entity);
+    var entity = await Get(routeEntity.Name);
+    return entity;
   }
 
-  public async Task<Route> Update(RouteDto routeDto)
+  public async Task<RouteEntity> Update(RouteEntity routeEntityDto)
   {
-    var actualRoute = await Get(routeDto.Id);
+    var actualRoute = await Get(routeEntityDto.Id);
 
-    actualRoute.Name = routeDto.Name;
-    actualRoute.Description = routeDto.Description;
-    actualRoute.Destination = routeDto.Destination;
-    actualRoute.Price = routeDto.Price;
-    actualRoute.Seats = routeDto.Seats;
-    actualRoute.BookedSeats = routeDto.BookedSeats;
-    actualRoute.StartDate = routeDto.StartDate;
-    actualRoute.EndDate = routeDto.EndDate;
+    actualRoute.Name = routeEntityDto.Name;
+    actualRoute.Description = routeEntityDto.Description;
+    actualRoute.Destination = routeEntityDto.Destination;
+    actualRoute.Price = routeEntityDto.Price;
+    actualRoute.Seats = routeEntityDto.Seats;
+    actualRoute.BookedSeats = routeEntityDto.BookedSeats;
+    actualRoute.StartDate = routeEntityDto.StartDate;
+    actualRoute.EndDate = routeEntityDto.EndDate;
 
     await Update(actualRoute);
     return actualRoute;
   }
 
-  public async Task<IEnumerable<Route>> Search(string destination, DateTime? startDate, decimal? price) =>
+  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price) =>
     await _repository.Search(destination, startDate, price);
 
   public async Task<int> GetSeatsCapacity(int routeId)
@@ -84,13 +83,13 @@ public class RouteService : BaseService<IRouteRepository, Route>, IRouteService
     await Delete(route);
   }
 
-  public async Task<IEnumerable<Route>> GetAll() =>
+  public async Task<IEnumerable<RouteEntity>> GetAll() =>
     await _repository.GetAllAsync();
 
-  public async Task<Route?> Get(string name) =>
+  public async Task<RouteEntity?> Get(string name) =>
     await _repository.FirstOrDefaultAsync(x => x.Name == name);
 
-  public async Task<Route?> Get(int routeId) =>
+  public async Task<RouteEntity?> Get(int routeId) =>
     await _repository.FirstOrDefaultAsync(x => x.Id == routeId);
 
   private async Task ValidateRouteIsExistByName(string name)

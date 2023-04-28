@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookTouristRoutes.BLL.Repositories;
 
-public class RouteRepository : Repository<Route>, IRouteRepository
+public class RouteRepository : Repository<RouteEntity>, IRouteRepository
 {
   private readonly BookTouristRoutesContext _context;
 
@@ -15,10 +15,10 @@ public class RouteRepository : Repository<Route>, IRouteRepository
     _context = context;
   }
 
-  public async Task<IEnumerable<Route>> GetAllAsync() =>
+  public async Task<IEnumerable<RouteEntity>> GetAllAsync() =>
     await _context.Routes.AsNoTracking().ToListAsync();
 
-  public async Task<IEnumerable<Route>> Search(string destination, DateTime? startDate, decimal? price)
+  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price)
   {
     var query = _context.Routes.AsQueryable().Where(r => r.Destination == destination);
 

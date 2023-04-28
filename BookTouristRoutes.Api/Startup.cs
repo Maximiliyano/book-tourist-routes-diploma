@@ -20,8 +20,7 @@ public class Startup
     var migrationAssembly = typeof(BookTouristRoutesContext).Assembly.GetName().Name;
     services.AddDbContext<BookTouristRoutesContext>(options =>
       options.UseSqlServer(_configuration.GetConnectionString("DbConnection"),
-        opt => opt.MigrationsAssembly(migrationAssembly))
-        .EnableSensitiveDataLogging());
+        opt => opt.MigrationsAssembly(migrationAssembly)));
 
     services.RegisterAutoMapper();
 

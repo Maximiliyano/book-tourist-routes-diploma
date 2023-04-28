@@ -17,19 +17,19 @@ public class ImageService : BaseService<IImageRepository, Image>, IImageService
   {
     await ValidateImageIsExistByUrl(image.URL);
 
-    await _repository.CreateAsync(image);
+    await Create(image);
   }
 
   public async Task UpdateImage(Image image)
   {
     await ValidateImageIsNotExistById(image.Id);
 
-    await _repository.UpdateAsync(image);
+    await Update(image);
   }
 
   public async Task Remove(Image image)
   {
-    await _repository.RemoveImageAsync(image);
+    await Delete(image);
   }
 
   public async Task<Image> GetEntityByUrl(string url) =>

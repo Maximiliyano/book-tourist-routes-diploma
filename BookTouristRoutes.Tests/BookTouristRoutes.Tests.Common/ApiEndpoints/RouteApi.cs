@@ -12,16 +12,16 @@ public class RouteApi : BaseApi
   {
   }
 
-  public async Task<RestResponse<RouteDto>> Create(RouteDto route)
+  public async Task<RestResponse<RouteEntity>> Create(RouteEntity route)
   {
     var request = CreatePostRequest(RouteApiStringFormat.Create, route);
-    return await ExecuteRequest<RouteDto>(request);
+    return await ExecuteRequest<RouteEntity>(request);
   }
 
-  public async Task<RestResponse<Route?>> Update(RouteDto route)
+  public async Task<RestResponse<RouteEntity?>> Update(RouteEntity route)
   {
     var request = CreatePutRequest(string.Empty, route);
-    return await ExecuteRequest<Route>(request);
+    return await ExecuteRequest<RouteEntity>(request);
   }
 
   public async Task<RestResponse> Delete(int routeId)
@@ -30,7 +30,7 @@ public class RouteApi : BaseApi
     return await ExecuteRequest(request);
   }
 
-  public async Task<RestResponse<IEnumerable<Route>>> Search(string destination, DateTime? startDate, decimal? price)
+  public async Task<RestResponse<IEnumerable<RouteEntity>>> Search(string destination, DateTime? startDate, decimal? price)
   {
     var request = CreateGetRequest(string.Format(RouteApiStringFormat.Search, destination));
 
@@ -43,7 +43,7 @@ public class RouteApi : BaseApi
       request.AddQueryParameter(nameof(price.Value), price.Value);
     }
 
-    return await ExecuteRequest<IEnumerable<Route>>(request);
+    return await ExecuteRequest<IEnumerable<RouteEntity>>(request);
   }
 
   public async Task<RestResponse<int>> GetAvailableSeats(int routeId)
@@ -64,21 +64,21 @@ public class RouteApi : BaseApi
     return await ExecuteRequest<int>(request);
   }
 
-  public async Task<RestResponse<IEnumerable<Route>>> GetAll()
+  public async Task<RestResponse<IEnumerable<RouteEntity>>> GetAll()
   {
     var request = CreateGetRequest(string.Format(RouteApiStringFormat.GetAll));
-    return await ExecuteRequest<IEnumerable<Route>>(request);
+    return await ExecuteRequest<IEnumerable<RouteEntity>>(request);
   }
 
-  public async Task<RestResponse<Route>> GetById(int routeId)
+  public async Task<RestResponse<RouteEntity>> GetById(int routeId)
   {
     var request = CreateGetRequest(string.Format(RouteApiStringFormat.Get, routeId));
-    return await ExecuteRequest<Route>(request);
+    return await ExecuteRequest<RouteEntity>(request);
   }
 
-  public async Task<RestResponse<Route>> GetByName(string routeName)
+  public async Task<RestResponse<RouteEntity>> GetByName(string routeName)
   {
     var request = CreateGetRequest(string.Format(RouteApiStringFormat.Get, routeName));
-    return await ExecuteRequest<Route>(request);
+    return await ExecuteRequest<RouteEntity>(request);
   }
 }

@@ -1,4 +1,5 @@
-﻿using BookTouristRoutes.Tests.Helpers;
+﻿using BookTouristRoutes.Common.Models;
+using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
 
@@ -8,8 +9,8 @@ public class RouteSearchTests
 {
   private readonly RouteHelper _routeHelper;
 
-  private IEnumerable<BookTouristRoutes.Common.Models.Route> _result;
-  private BookTouristRoutes.Common.Models.Route _route;
+  private IEnumerable<RouteEntity> _result;
+  private RouteEntity _route;
 
   public RouteSearchTests()
   {

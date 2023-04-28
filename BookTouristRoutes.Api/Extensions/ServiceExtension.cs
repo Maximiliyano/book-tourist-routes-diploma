@@ -19,6 +19,7 @@ public static class ServiceExtension
     service.AddScoped<JwtIssuerOptions>();
     service.AddScoped<IJwtFactory, JwtFactory>();
 
+    service.AddScoped<IBookingService, BookingService>();
     service.AddScoped<IRouteService, RouteService>();
     service.AddScoped<IUserService, UserService>();
     service.AddScoped<IImageService, ImageService>();
@@ -27,6 +28,7 @@ public static class ServiceExtension
 
   public static void RegisterRepositories(this IServiceCollection service)
   {
+    service.AddScoped<IBookingRepository, BookingRepository>();
     service.AddScoped<IRouteRepository, RouteRepository>();
     service.AddScoped<IUserRepository, UserRepository>();
     service.AddScoped<IImageRepository, ImageRepository>();

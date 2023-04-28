@@ -2,8 +2,8 @@ using BookTouristRoutes.Common.Models;
 
 namespace BookTouristRoutes.BLL.Interfaces.Repositories;
 
-public interface IRouteRepository : IRepository<Route>
+public interface IRouteRepository : IRepository<RouteEntity>
 {
-  Task<IEnumerable<Route>> GetAllAsync();
-  Task<IEnumerable<Route>> Search(string destination, DateTime? startDate, decimal? price);
+  Task<IEnumerable<RouteEntity>> GetAllAsync();
+  Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price);
 }

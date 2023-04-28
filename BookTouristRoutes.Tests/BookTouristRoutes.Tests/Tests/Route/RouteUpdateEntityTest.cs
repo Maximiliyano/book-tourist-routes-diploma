@@ -1,5 +1,5 @@
-﻿using BookTouristRoutes.Common.Dtos;
-using BookTouristRoutes.Common.Helpers;
+﻿using BookTouristRoutes.Common.Helpers;
+using BookTouristRoutes.Common.Models;
 using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
@@ -10,7 +10,7 @@ public class RouteUpdateEntityTest
 {
   private readonly RouteHelper _routeHelper;
 
-  private RouteDto _route;
+  private RouteEntity _route;
 
   public RouteUpdateEntityTest()
   {
@@ -20,7 +20,7 @@ public class RouteUpdateEntityTest
   [SetUp]
   public async Task SetUp()
   {
-    _route = (RouteDto)await _routeHelper.Create();
+    _route = (RouteEntity)await _routeHelper.Create();
   }
 
   [TearDown]

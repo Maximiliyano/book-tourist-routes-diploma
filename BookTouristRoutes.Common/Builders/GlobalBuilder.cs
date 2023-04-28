@@ -7,7 +7,7 @@ namespace BookTouristRoutes.Common.Builders;
 
 public static class GlobalBuilder
 {
-  public static RouteDto BuildRouteDto(
+  public static RouteEntity BuildRoute(
     string? name, string? description,
     DateTime? startDate, DateTime? endDate,
     int? seats, int? bookedSeats,

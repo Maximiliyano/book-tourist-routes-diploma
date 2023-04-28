@@ -3,7 +3,7 @@ using BookTouristRoutes.Common.Enums;
 
 namespace BookTouristRoutes.Common.Models;
 
-public class User : BaseModel
+public sealed class User : BaseModel
 {
   public string Name { get; set; }
 
