@@ -1,29 +1,37 @@
-<mat-toolbar color="primary">
-  <div class="header">
-    <div class="header-content title" [routerLink]="['/']">
-      <img src="/assets/logo.png">
+<div class="header">
+  <div class="header-content" [routerLink]="['/']">
+    <div class="header-img">
+      <img src="/assets/logo.png" alt="">
       Book Tourist Routes
     </div>
+    <nav class="header-menu">
+      <ul class="menu-list">
+        <div *ngIf="!authorizedUser" class="header-content auth-area">
+          <li class="menu-item">
+            <button mat-raised-button (click)="openAuthDialog(dialogType.SignIn)">Login</button>
+          </li>
+          <li class="menu-item">
+            <button mat-raised-button (click)="openAuthDialog(dialogType.SignUp)">Register</button>
+          </li>
+        </div>
+        <div *ngIf="authorizedUser" class="header-content" [matMenuTriggerFor]="menu">
+          <div class="user-area">
+            <div>{{authorizedUser.name}}</div>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <div mat-menu-item [routerLink]="['/profile']">Go to profile</div>
+              <div mat-menu-item (click)="logout()"><u>Logout</u></div>
+            </mat-menu>
+          </div>
+          <img mat-card-image class="avatar avatar-size" src="{{setUserAvatar()}}" alt="Ava">
+        </div>
+      </ul>
+    </nav>
   </div>
-</mat-toolbar>
-<div class="main-content">
-
-  <div>
-    <button (click)="getUser()">Get User</button>
-    <div *ngIf="userData">
-      <h2>User Data</h2>
-      <table>
-        <tr>
-          <th>ID</th>
-          <td>{{ userData.id }}</td>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <td>{{ userData.name }}</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <router-outlet></router-outlet>
 </div>
+<div class="wrapper">
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<footer></footer>

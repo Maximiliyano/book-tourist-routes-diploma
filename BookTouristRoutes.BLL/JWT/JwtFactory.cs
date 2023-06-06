@@ -57,10 +57,8 @@ public sealed class JwtFactory : IJwtFactory
   {
     var claimsPrincipal = GetPrincipalFromToken(accessToken, signingKey);
 
-    if (claimsPrincipal == null)
-    {
+    if (claimsPrincipal is null)
       throw CustomException.InvalidTokenException("access", claimsPrincipal);
-    }
 
     return int.Parse(claimsPrincipal.Claims.First(c => c.Type == "id").Value);
   }
@@ -81,7 +79,8 @@ public sealed class JwtFactory : IJwtFactory
     {
       var principal = _jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out var securityToken);
 
-      if (!(securityToken is JwtSecurityToken jwtSecurityToken) || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+      if (securityToken is not JwtSecurityToken jwtSecurityToken ||
+          !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
       {
         throw new SecurityTokenException("Invalid token");
       }
@@ -111,7 +110,7 @@ public sealed class JwtFactory : IJwtFactory
 
   private static void ThrowIfInvalidOptions(JwtIssuerOptions options)
   {
-    if (options == null)
+    if (options is null)
     {
       throw new ArgumentNullException(nameof(options));
     }

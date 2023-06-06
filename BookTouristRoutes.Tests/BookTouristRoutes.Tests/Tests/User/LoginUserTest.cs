@@ -1,3 +1,6 @@
+using System.Net;
+using BookTouristRoutes.Common.Dtos;
+using BookTouristRoutes.Tests.Common.ApiEndpoints;
 using BookTouristRoutes.Tests.Common.Extensions;
 using BookTouristRoutes.Tests.Helpers;
 using FluentAssertions;
@@ -7,12 +10,12 @@ namespace BookTouristRoutes.Tests.Tests.User;
 
 public class LoginUserTest
 {
-  private readonly AuthHelper _authHelper;
+  private readonly AuthApi _authApi;
   private readonly UserHelper _userHelper;
 
   public LoginUserTest()
   {
-    _authHelper = new AuthHelper();
+    _authApi = new AuthApi();
     _userHelper = new UserHelper();
   }
 
@@ -21,15 +24,18 @@ public class LoginUserTest
   [TestCase("user@example.com", "")]
   [TestCase("", "")]
   [Test]
-  public async Task LoginNotExistingUser_ReturnBadRequest(string email, string password)
+  public async Task LoginNotExistingUser_ReturnNotFound(string email, string password)
   {
+    // Arrange
+    var loginUserDto = BuildLoginUserDto(email, password);
+
     // Act
-    var response = await _authHelper.Login(email, password);
+    var response = await _authApi.Login(loginUserDto);
 
     // Assert
     using (new AssertionScope())
     {
-      response.Should().BeNull();
+      response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
   }
 
@@ -38,9 +44,10 @@ public class LoginUserTest
   {
     // Arrange
     var user = await _userHelper.Create();
+    var loginUserDto = BuildLoginUserDto(user.Email, user.Password);
 
     // Act
-    var response = await _authHelper.Login(user.Email, user.Password);
+    var response = await _authApi.Login(loginUserDto);
 
     await _userHelper.Delete(user.Id);
 
@@ -49,10 +56,18 @@ public class LoginUserTest
     {
       response.Should().NotBeNull();
 
-      response.User.Should().BeEquivalentTo(user, o =>
+      response.StatusCode.Should().Be(HttpStatusCode.OK);
+      response.Data.User.Should().BeEquivalentTo(user, o =>
         o.Excluding(x =>
             x.Id,
             x => x.Password));
     }
   }
+
+  private static LoginUserDto BuildLoginUserDto(string email, string password) =>
+    new()
+    {
+      Email = email,
+      Password = password
+    };
 }

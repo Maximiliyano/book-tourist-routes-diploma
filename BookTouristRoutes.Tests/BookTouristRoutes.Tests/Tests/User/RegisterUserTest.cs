@@ -14,8 +14,6 @@ public class RegisterUserTest
 
   private RegisterUserDto _registerUserDto;
 
-  private static string email = AppHelper.GenerateRandomName();
-
   public RegisterUserTest()
   {
     _userHelper = new UserHelper();
@@ -65,6 +63,11 @@ public class RegisterUserTest
     {
       user.Should().BeNull();
     }
+
+    if (user is not null)
+    {
+      await _userHelper.Delete(user.Id);
+    }
   }
 
   [Test]
@@ -72,6 +75,11 @@ public class RegisterUserTest
   {
     // Act
     var user = await _userHelper.Create();
+
+    if (user is not null)
+    {
+      await _userHelper.Delete(user.Id);
+    }
 
     // Assert
     using (new AssertionScope())
@@ -85,6 +93,11 @@ public class RegisterUserTest
   {
     // Act
     var user = await _userHelper.Create();
+
+    if (user is not null)
+    {
+      await _userHelper.Delete(user.Id);
+    }
 
     // Assert
     using (new AssertionScope())

@@ -1,3 +1,4 @@
+using BookTouristRoutes.Api.Extensions;
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.Common.BaseEntities;
 using BookTouristRoutes.Common.Dtos;
@@ -32,6 +33,12 @@ public class UserController : BaseController
   public async Task<IActionResult> GetByEmail([FromQuery] string userEmail)
   {
     return Ok(await _userService.Get(userEmail));
+  }
+
+  [HttpGet("fromToken")]
+  public async Task<IActionResult> GetUserFromToken()
+  {
+    return Ok(await _userService.Get(this.GetUserIdFromToken()));
   }
 
   [HttpPut("{userId:int}/change-pass")]
