@@ -9,7 +9,8 @@ public class RouteSearchTests
 {
   private readonly RouteHelper _routeHelper;
 
-  private IEnumerable<RouteEntity> _result;
+  private IEnumerable<RouteEntity> _routeEntities;
+
   private RouteEntity _route;
 
   public RouteSearchTests()
@@ -70,19 +71,19 @@ public class RouteSearchTests
     // Act
     if (useStartDate)
     {
-      _result = await _routeHelper.Search(_route.Destination, startDate: _route.StartDate);
+      _routeEntities = await _routeHelper.Search(_route.Destination, startDate: _route.StartDate);
     }
 
     if (usePrice)
     {
-      _result = await _routeHelper.Search(_route.Destination, price: _route.Price);
+      _routeEntities = await _routeHelper.Search(_route.Destination, price: _route.Price);
     }
 
-    _result = useStartDate switch
+    _routeEntities = useStartDate switch
     {
       true when usePrice => await _routeHelper.Search(_route.Destination, _route.StartDate, _route.Price),
       false when !usePrice => await _routeHelper.Search(_route.Destination),
-      _ => _result
+      _ => _routeEntities
     };
 
     await _routeHelper.Delete(_route.Id);
@@ -90,7 +91,7 @@ public class RouteSearchTests
     // Assert
     using (new AssertionScope())
     {
-      _result.Should().Contain(x => x.Destination == _route.Destination)
+      _routeEntities.Should().Contain(x => x.Destination == _route.Destination)
         .And
         .Contain(x => x.StartDate == _route.StartDate)
         .And

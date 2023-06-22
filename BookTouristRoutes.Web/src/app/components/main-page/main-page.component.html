@@ -1,0 +1,21 @@
+<div class="main-page">
+  <header>
+    <h1>Welcome to the Book Tourist Routes Web App</h1>
+    <p>Discover and book amazing tourist routes for your next adventure!</p>
+  </header>
+
+  <section>
+    <h2>Popular Routes</h2>
+    <div class="route-list">
+      <app-route-card *ngFor="let route of popularRoutes" [route]="route"></app-route-card>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Destinations</h2>
+    <div class="destination-list">
+      <app-destination-card *ngFor="let destination of featuredDestinations"
+        [destination]="destination"></app-destination-card>
+    </div>
+  </section>
+</div>

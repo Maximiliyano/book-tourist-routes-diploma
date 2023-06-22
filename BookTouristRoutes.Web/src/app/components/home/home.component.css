@@ -1,21 +1,38 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
   width: 100%;
 }
 
 .header-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   height: 100%;
+  max-width: 100%;
   cursor: pointer;
+  padding: 10px;
+  background-color: #312f2f;
 }
 
 .header-content:focus {
   outline: none;
+}
+
+.header-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 10px;
+  z-index: 5;
+}
+
+.header-img img {
+  width: 3.8rem;
+}
+
+.menu-item {
+  background-color: #bbb9b9;
 }
 
 .title {
@@ -28,4 +45,68 @@
 
 .main-content {
   margin: 0 30%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
+}
+
+.auth-area {
+  font-size: 13px;
+  cursor: default;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.avatar {
+  margin-left: 15px;
+}
+
+.avatar-size {
+  height: 40px;
+  width: 40px;
+}
+
+.user-area {
+  line-height: normal;
+  font-size: 13px;
+  margin-left: 5px;
+  margin: 3px 0;
+  width: fit-content;
+  color: #ffffff;
+}
+
+[class*="__container"] {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+footer {
+  height: 20vh;
+  background-color: #312f2f;
 }
