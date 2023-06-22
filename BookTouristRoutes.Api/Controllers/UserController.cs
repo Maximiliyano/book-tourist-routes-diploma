@@ -36,7 +36,7 @@ public class UserController : BaseController
   }
 
   [HttpGet("fromToken")]
-  public async Task<IActionResult> GetUserFromToken()
+  public async Task<IActionResult> GetUserFromToken() // TODO get (userid & expiredData < DateTime.Now) in refreshToken
   {
     return Ok(await _userService.Get(this.GetUserIdFromToken()));
   }

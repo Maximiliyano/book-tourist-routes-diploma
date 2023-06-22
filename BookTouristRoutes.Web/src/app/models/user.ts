@@ -1,6 +1,6 @@
 import { Avatar } from "./avatar";
 
-export class User {
+export interface User {
   id: number;
   name: string;
   password: string;

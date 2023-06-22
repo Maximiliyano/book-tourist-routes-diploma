@@ -36,17 +36,5 @@ export class MainPageComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit() {
-    this.getUser();
-
-    this.eventService.userChangedEvent$.pipe(takeUntil(this.unsubscribe$)).subscribe((user) => {
-      this.currentUser = user;
-    });
-  }
-
-  private getUser() {
-    this.authService
-      .getUser()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((user) => (this.currentUser = user));
   }
 }

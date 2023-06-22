@@ -12,9 +12,7 @@ import { UserService } from '../user/user.service';
 import { of } from 'rxjs/internal/observable/of';
 import { RegisterUser } from 'src/app/models/register-user';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class AuthService {
   public routePrefix = '/api/authorization';
   public user: User | null;
@@ -55,7 +53,7 @@ export class AuthService {
     this.revokeRefreshToken();
     this.removeTokensFromStorage();
     this.user = null;
-    this.eventService.userChanged(new User());
+    this.eventService.userChanged(this.user!);
   }
 
   public areTokensExist() {

@@ -1,7 +1,7 @@
 import { AccessTokenDto } from "../interfaces/access-token-dto";
 import { User } from "./user";
 
-export class LoginUserCredentials {
+export interface LoginUserCredentials {
   user: User;
   token: AccessTokenDto;
 }
