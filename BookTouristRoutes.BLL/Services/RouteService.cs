@@ -28,7 +28,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var entity = await Get(routeEntityDto.Id);
 
     if (entity is null)
-      throw CustomException.EntityNotFound(nameof(entity), routeEntityDto.Id);
+      throw new NotFoundException(nameof(entity), routeEntityDto.Id);
 
     entity.Name = routeEntityDto.Name;
     entity.Description = routeEntityDto.Description;
@@ -51,7 +51,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var route = await Get(routeId);
 
     if (route is null)
-      throw CustomException.EntityNotFound(nameof(route), routeId);
+      throw new NotFoundException(nameof(route), routeId);
 
     return route.Seats;
   }
@@ -61,7 +61,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var route = await Get(routeId);
 
     if (route is null)
-      throw CustomException.EntityNotFound(nameof(route), routeId);
+      throw new NotFoundException(nameof(route), routeId);
 
     return route.Seats - route.BookedSeats;
   }
@@ -71,7 +71,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var route = await Get(routeId);
 
     if (route is null)
-      throw CustomException.EntityNotFound(nameof(route), routeId);
+      throw new NotFoundException(nameof(route), routeId);
 
     return route.BookedSeats;
   }
@@ -81,7 +81,7 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var route = await Get(routeId);
 
     if (route is null)
-      throw CustomException.EntityNotFound(nameof(route), routeId);
+      throw new NotFoundException(nameof(route), routeId);
 
     await Delete(route);
   }
@@ -100,6 +100,6 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     var route = await Get(name);
 
     if (route is not null)
-      throw CustomException.RepeatException(nameof(route), name);
+      throw new RepeatException(nameof(route), name);
   }
 }

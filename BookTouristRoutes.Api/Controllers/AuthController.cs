@@ -1,11 +1,13 @@
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.Common.BaseEntities;
 using BookTouristRoutes.Common.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookTouristRoutes.Api.Controllers;
 
 [ApiController]
+[AllowAnonymous]
 [Route("api/authorization")]
 public class AuthController : BaseController
 {

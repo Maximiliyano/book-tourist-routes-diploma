@@ -12,7 +12,7 @@ public static class ControllerBaseExtensions
 
     if (string.IsNullOrEmpty(claimsUserId))
     {
-      throw CustomException.InvalidTokenException("access", claimsUserId);
+      throw new InvalidTokenException("access");
     }
 
     return int.Parse(claimsUserId);

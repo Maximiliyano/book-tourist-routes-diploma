@@ -48,7 +48,7 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var user = await Get(userId);
 
     if (user is null)
-      throw CustomException.EntityNotFound(nameof(user), userId);
+      throw new NotFoundException(nameof(user), userId);
 
     await Delete(user);
   }
@@ -115,7 +115,7 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var user = await _repository.GetByIdAsync(userId);
 
     if (user is null)
-      throw CustomException.EntityNotFound(nameof(user), userId);
+      throw new NotFoundException(nameof(user), userId);
 
     return user;
   }
@@ -125,7 +125,7 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var user = await _repository.GetByEmailAsync(email);;
 
     if (user is null)
-      throw CustomException.EntityNotFound(nameof(user), email);
+      throw new NotFoundException(nameof(user), email);
 
     return user;
   }
@@ -148,7 +148,7 @@ public class UserService : BaseService<IUserRepository, User>, IUserService
     var user = await _repository.GetByEmailAsync(email);
 
     if (user is not null)
-      throw CustomException.RepeatException(nameof(user), email);
+      throw new RepeatException(nameof(user), email);
   }
 
   private static Image BuildImageEntity(string url) =>

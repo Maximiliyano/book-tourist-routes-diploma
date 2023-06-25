@@ -8,7 +8,7 @@ public sealed class AccessToken
 
   public AccessToken(string token, int expiresIn)
   {
-    Token = token;
-    ExpiresIn = expiresIn;
+      Token = token;
+      ExpiresIn = expiresIn;
   }
 }

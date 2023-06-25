@@ -58,7 +58,7 @@ public sealed class JwtFactory : IJwtFactory
     var claimsPrincipal = GetPrincipalFromToken(accessToken, signingKey);
 
     if (claimsPrincipal is null)
-      throw CustomException.InvalidTokenException("access", claimsPrincipal);
+      throw new InvalidTokenException("access");
 
     return int.Parse(claimsPrincipal.Claims.First(c => c.Type == "id").Value);
   }
@@ -89,17 +89,16 @@ public sealed class JwtFactory : IJwtFactory
     }
     catch (Exception)
     {
+      // Token validation failed
       return null;
     }
   }
 
-  private static ClaimsIdentity GenerateClaimsIdentity(int id, string userName)
-  {
-    return new ClaimsIdentity(new GenericIdentity(userName, "Token"), new[]
+  private static ClaimsIdentity GenerateClaimsIdentity(int id, string userName) =>
+    new(new GenericIdentity(userName, "Token"), new[]
     {
       new Claim("id", id.ToString())
     });
-  }
 
   private static long ToUnixEpochDate(DateTime date)
   {

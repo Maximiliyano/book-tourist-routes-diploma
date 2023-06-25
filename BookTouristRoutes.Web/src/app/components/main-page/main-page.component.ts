@@ -36,5 +36,10 @@ export class MainPageComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit() {
+    this.routeService.getPopularRoutes()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((routes) => {
+        this.popularRoutes = routes.body as Route[];
+      });
   }
 }

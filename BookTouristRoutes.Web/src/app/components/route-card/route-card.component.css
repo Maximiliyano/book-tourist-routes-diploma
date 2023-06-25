@@ -1,0 +1,58 @@
+.route-card {
+  margin-bottom: 15px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.route-card-content {
+  margin-top: 10px;
+}
+
+.route-buttons {
+  margin: 5px;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.slideshow img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  right: 60px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+@media (max-width: 850px) {
+  .slideshow {
+    height: 300px;
+  }
+}

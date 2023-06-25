@@ -120,3 +120,6 @@ C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bi
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\Bogus.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\maxim\source\repos\book-tourist-routes-diploma\BookTouristRoutes.Api\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

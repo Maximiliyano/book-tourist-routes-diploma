@@ -9,4 +9,5 @@ public interface IAuthService
   Task<AccessTokenDto> GenerateAccessToken(int userId, string userName, string email);
   Task<AccessTokenDto> RefreshToken(RefreshTokenDto dto);
   Task RevokeRefreshToken(string refreshToken, int userId);
+  Task<int> GetUserIdFromToken();
 }

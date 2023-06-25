@@ -46,7 +46,7 @@ public class ImageService : BaseService<IImageRepository, Image>, IImageService
     var image = await GetByUrl(url);
 
     if (image is not null)
-      throw CustomException.RepeatException(nameof(image), url);
+      throw new RepeatException(nameof(image), url);
   }
 
   private async Task ValidateImageIsNotExistById(int userId)
@@ -54,6 +54,6 @@ public class ImageService : BaseService<IImageRepository, Image>, IImageService
     var image = await GetById(userId);
 
     if (image is null)
-      throw CustomException.EntityNotFound(nameof(image), userId);
+      throw new NotFoundException(nameof(image), userId);
   }
 }

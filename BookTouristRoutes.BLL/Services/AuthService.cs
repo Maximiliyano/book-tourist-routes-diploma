@@ -35,7 +35,7 @@ public class AuthService : BaseService<IUserRepository, User>, IAuthService
     var userEntity = await _userService.Get(loginUserDto.Email);
 
     if (!SecurityHelper.ValidatePassword(loginUserDto.Password, userEntity.Password, userEntity.Salt))
-      throw CustomException.InvalidUsernameOrPasswordException();
+      throw new InvalidUserCredentialsException();
 
     var token = await GenerateAccessToken(userEntity.Id, userEntity.Name, userEntity.Email);
     var user = _mapper.Map<UserDto>(userEntity);
@@ -65,10 +65,10 @@ public class AuthService : BaseService<IUserRepository, User>, IAuthService
       t.UserId == userId);
 
     if (rToken is null)
-      throw CustomException.InvalidTokenException("refresh", rToken);
+      throw new InvalidTokenException("refresh");
 
     if (!rToken.IsActive)
-      throw CustomException.ExpiredRefreshTokenException();
+      throw new ExpiredRefreshTokenException();
 
     var jwtToken = await _jwtFactory.GenerateAccessToken(userEntity.Id, userEntity.Name, userEntity.Email);
     var refreshToken = _jwtFactory.GenerateRefreshToken();
@@ -87,9 +87,21 @@ public class AuthService : BaseService<IUserRepository, User>, IAuthService
 
     if (rToken is null)
     {
-      throw CustomException.InvalidTokenException("refresh", rToken);
+      throw new InvalidTokenException("refresh");
     }
 
     await _refreshTokenRepository.DeleteAsync(rToken);
+  }
+
+  public async Task<int> GetUserIdFromToken()
+  {
+    var refreshToken = await _refreshTokenRepository.FirstOrDefaultAsync(x => x.Expires > DateTime.Now);
+
+    if (refreshToken is null)
+    {
+      throw new InvalidTokenException("access");
+    }
+
+    return refreshToken.UserId;
   }
 }

@@ -1,1 +1,26 @@
-<p>route-card works!</p>
+<mat-card class="route-card">
+  <mat-card-header>
+    <div class="slideshow position-relative">
+      <img *ngFor="let photo of photos" [src]="photo.url" [alt]="photo.alt" [class.active]="photo === currentPhoto">
+      <div class="image-buttons">
+        <button class="prev-btn" (click)="prevPhoto()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button class="next-btn" (click)="nextPhoto()">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="route-card-content">
+    <h2>Europe's most visited places</h2>
+    <p>Aenean in lacus nec dolor fermentum congue. Maecenas ut velit pharetra, pharetra tortor sit amet, vulputate
+      sem.
+      Vestibulum mi nibh, faucibus ac eros id, sagittis tincidunt velit. Proin interdum ullamcorper faucibus. Ut
+      mi
+      nunc, sollicitudin non pulvinar id, sagittis eget diam.</p>
+  </mat-card-content>
+  <mat-card-actions class="route-buttons">
+    <button mat-raised-button>Details</button>
+  </mat-card-actions>
+</mat-card>

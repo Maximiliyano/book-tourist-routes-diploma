@@ -51,7 +51,7 @@ public class BookingService : BaseService<IBookingRepository, Booking>, IBooking
     var bookingEntity = await GetBooking(bookingId);
 
     if (bookingEntity is null)
-      throw CustomException.EntityNotFound(nameof(bookingEntity), bookingId);
+      throw new NotFoundException(nameof(bookingEntity), bookingId);
 
     await Delete(bookingEntity);
   }
@@ -82,7 +82,7 @@ public class BookingService : BaseService<IBookingRepository, Booking>, IBooking
     var routeEntity = await _routeService.Get(bookingRouteId);
 
     if (routeEntity is null)
-      throw CustomException.EntityNotFound(nameof(routeEntity), bookingRouteId);
+      throw new NotFoundException(nameof(routeEntity), bookingRouteId);
   }
 
   private async Task ValidateBookingUserId(int bookingUserId)
@@ -90,7 +90,7 @@ public class BookingService : BaseService<IBookingRepository, Booking>, IBooking
     var userEntity = await _userService.Get(bookingUserId);
 
     if (userEntity is null)
-      throw CustomException.EntityNotFound(nameof(userEntity), bookingUserId);
+      throw new NotFoundException(nameof(userEntity), bookingUserId);
   }
 
   private async Task ValidateBookingUid(Guid modelUid)

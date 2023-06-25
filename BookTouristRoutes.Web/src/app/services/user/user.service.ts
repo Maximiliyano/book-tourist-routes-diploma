@@ -14,6 +14,10 @@ export class UserService {
     return this.httpService.getFullRequest<User>(`${this.routePrefix}/fromToken`);
   }
 
+  public getUserById(userId: number) {
+    return this.httpService.getFullRequest<User>(`${this.routePrefix}/details/${userId}`);
+  }
+
   public copyUser({ email, name, id, avatar, password, avatarId, role, salt, createdAt, updatedAt }: User) {
     return {
       email,

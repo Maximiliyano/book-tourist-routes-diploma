@@ -2,8 +2,8 @@ namespace BookTouristRoutes.Common.Auth;
 
 public sealed class AccessTokenDto
 {
-  private AccessToken AccessToken { get; }
-  private string RefreshToken { get; }
+  public AccessToken AccessToken { get; }
+  public string RefreshToken { get; }
 
   public AccessTokenDto (AccessToken accessToken, string refreshToken)
   {

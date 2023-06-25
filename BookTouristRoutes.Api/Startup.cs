@@ -1,6 +1,9 @@
-﻿using BookTouristRoutes.Api.Extensions;
+﻿using System.Net;
+using BookTouristRoutes.Api.Extensions;
+using BookTouristRoutes.Api.Filters;
 using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.DAL.Context;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookTouristRoutes.Api;
@@ -36,12 +39,15 @@ public class Startup
     {
       options.AddPolicy("CorsPolicy",
         builder => builder
-          .AllowAnyOrigin()
+          .AllowCredentials()
           .AllowAnyMethod()
-          .AllowAnyHeader());
+          .AllowAnyHeader()
+          .WithOrigins("http://localhost:4200"));
     });
 
+    services.AddMvcCore(options => options.Filters.Add(typeof(CustomExceptionFilterAttribute)));
     services.AddAuthentication();
+    services.AddFluentValidation();
   }
 
   public void Configure(
@@ -52,6 +58,10 @@ public class Startup
     {
       app.UseDeveloperExceptionPage();
     }
+    else
+    {
+      app.UseHsts();
+    }
 
     app.UseRouting();
     app.UseHttpsRedirection();
@@ -59,8 +69,6 @@ public class Startup
     app.UseAuthorization();
 
     app.UseCors("CorsPolicy");
-
-    app.UseMiddleware<CustomExceptionHandlerMiddleware>();
 
     app.UseSwagger();
     app.UseSwaggerUI();

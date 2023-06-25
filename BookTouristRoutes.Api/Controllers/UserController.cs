@@ -11,10 +11,12 @@ namespace BookTouristRoutes.Api.Controllers;
 public class UserController : BaseController
 {
   private readonly IUserService _userService;
+  private readonly IAuthService _authService;
 
-  public UserController(IUserService userService)
+  public UserController(IUserService userService, IAuthService authService)
   {
     _userService = userService;
+    _authService = authService;
   }
 
   [HttpGet("all")]
@@ -36,9 +38,9 @@ public class UserController : BaseController
   }
 
   [HttpGet("fromToken")]
-  public async Task<IActionResult> GetUserFromToken() // TODO get (userid & expiredData < DateTime.Now) in refreshToken
+  public async Task<IActionResult> GetUserFromToken() // TODO rework GetUserIdFromToken
   {
-    return Ok(await _userService.Get(this.GetUserIdFromToken()));
+    return Ok(await _userService.Get(await _authService.GetUserIdFromToken()));
   }
 
   [HttpPut("{userId:int}/change-pass")]

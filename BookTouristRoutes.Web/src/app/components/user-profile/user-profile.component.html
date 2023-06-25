@@ -1,1 +1,42 @@
-<p>user-profile works!</p>
+<div class="main-profile">
+  <mat-card class="container">
+    <mat-card-header class="header-profile">
+      <div mat-card-avatar>
+        <img src="{{setUserAvatar()}}" class="header-image">
+      </div>
+      <mat-card-title>{{authorizedUser?.name}}</mat-card-title>
+      <mat-card-subtitle>{{authorizedUser?.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="user-items">
+      <div class="user-data">
+        <div *ngIf="!editingProfile">
+          <p>Username: {{authorizedUser?.name}}</p>
+          <p>Created: {{authorizedUser?.createdAt}}</p>
+          <p>Role: {{setUserRole()}}</p>
+        </div>
+      </div>
+      <div *ngIf="editingProfile">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput value="{{authorizedUser?.name}}" />
+        </mat-form-field>
+        <mat-form-field> <!-- TODO disable role if not admin-->
+          <mat-slide-toggle [(ngModel)]="checkUserRole" [checked]="checkUserRole">
+            <div *ngIf="checkUserRole">Admin</div>
+            <div *ngIf="!checkUserRole">User</div>
+          </mat-slide-toggle>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card-actions class="action-buttons">
+    <div *ngIf="editingProfile">
+      <button mat-raised-button [disabled]="!isDataChanged()" (click)="saveData()">Save</button>
+      <button mat-raised-button (click)="switchEditingProfile()">Cancel</button>
+    </div>
+    <div *ngIf="!editingProfile">
+      <button mat-raised-button color="primary" aria-label="Edit" (click)="switchEditingProfile()">Edit</button>
+      <button mat-raised-button [routerLink]="['/']">Back</button>
+    </div>
+  </mat-card-actions>
+</div>

@@ -44,7 +44,7 @@
 }
 
 .main-content {
-  margin: 0 30%;
+  margin: 0 auto;
 }
 
 nav ul {
@@ -84,6 +84,11 @@ nav ul li a:hover {
 
 .avatar {
   margin-left: 15px;
+  flex-shrink: 0;
+  object-fit: cover;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 50%;
 }
 
 .avatar-size {

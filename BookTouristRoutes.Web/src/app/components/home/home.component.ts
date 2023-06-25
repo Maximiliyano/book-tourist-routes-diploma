@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private getUser() {
-    if (this.authService.areTokensExist()) {
+    if (!this.authService.areTokensExist()) {
       return;
     }
 

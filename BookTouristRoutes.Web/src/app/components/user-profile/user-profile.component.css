@@ -1,0 +1,37 @@
+.main-profile {
+  margin-top: 30px;
+}
+
+.header-image {
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 6ch;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.card {
+  width: 80%;
+  max-width: 80%;
+  height: 300px;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+.main-div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+.button-save,
+.button-back {
+  margin-left: 10px;
+}

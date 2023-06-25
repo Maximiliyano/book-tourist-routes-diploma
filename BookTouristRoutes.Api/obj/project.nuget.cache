@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mmZe/EMuriOxeMPSZfl6fbRaTRI3tB2QbR7cIyaTum3sMPi6EJyp6SxBPCVH/s7vDj7/sw8QCPNuhNrEsM7cPg==",
+  "dgSpecHash": "VN/fH5hihppekm5Z9JnNG7ayTGXJoXu3Ymd/5XhtnGlhIFOBJcShptU9IXGCPJs50gD7wddFIa2SUZsx+0kuNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\maxim\\source\\repos\\book-tourist-routes-diploma\\BookTouristRoutes.Api\\BookTouristRoutes.Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\maxim\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
