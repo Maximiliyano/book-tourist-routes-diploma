@@ -1,3 +1,4 @@
+using System.Collections;
 using BookTouristRoutes.Common.Auth;
 using BookTouristRoutes.Common.Dtos;
 using BookTouristRoutes.Common.Enums;
@@ -20,7 +21,7 @@ public static class GlobalBuilder
         Price = price ?? AppHelper.GenerateRandomNumber(0, 1000),
         RouteId = routeId,
         UserId = userId,
-        Status = status ?? RandomBookingStatus(),
+        Status = status ?? AppHelper.RandomEnumValue<BookingStatus>(),
         Uid = Guid.Empty
       };
 
@@ -28,7 +29,8 @@ public static class GlobalBuilder
     string? name, string? description,
     DateTime? startDate, DateTime? endDate,
     int? seats, int? bookedSeats,
-    decimal? price, string? destination) =>
+    decimal? price, string? destination,
+    WorldParts? worldParts, ICollection<int>? images) =>
       new ()
       {
         Name = name ?? AppHelper.GenerateRandomName(),
@@ -38,7 +40,10 @@ public static class GlobalBuilder
         Seats = seats ?? AppHelper.GenerateRandomNumber(10, 100),
         BookedSeats = bookedSeats ?? AppHelper.GenerateRandomNumber(10, 100),
         Price = price ?? AppHelper.GenerateRandomNumber(0, 1000),
-        Destination = destination ?? AppHelper.GenerateRandomizeCharacters(10)
+        Destination = destination ?? AppHelper.GenerateRandomizeCharacters(10),
+        WorldPart = worldParts ?? AppHelper.RandomEnumValue<WorldParts>(),
+        Image = new Image(),
+        ImageId = null // TODO recheck autotests
       };
 
   public static User BuildUser(int userId, string email, string hashedPassword, string salt, string name) =>
@@ -90,12 +95,4 @@ public static class GlobalBuilder
 
   public static AccessTokenDto BuildAccessTokenDto(AccessToken accessToken, string token) =>
     new (accessToken, token);
-
-  private static BookingStatus RandomBookingStatus()
-  {
-    var values = Enum.GetValues(typeof(BookingStatus));
-    var random = new Random();
-    return (BookingStatus)(values.GetValue(random.Next(values.Length)) ?? throw new InvalidOperationException(
-      $"Invalid values in entity: {nameof(BookingStatus)}"));
-  }
 }

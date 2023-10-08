@@ -6,4 +6,5 @@ public interface IBookingRepository : IRepository<Booking>
 {
   Task<IEnumerable<Booking>> GetAllAsync();
   Task<IEnumerable<Booking>> GetBookingsByUserId(int userId);
+  Task<IEnumerable<int>> GetFrequentBookings();
 }

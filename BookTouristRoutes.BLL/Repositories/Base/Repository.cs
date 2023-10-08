@@ -9,7 +9,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 {
   private readonly BookTouristRoutesContext _context;
 
-  public Repository(BookTouristRoutesContext context)
+  protected Repository(BookTouristRoutesContext context)
   {
     _context = context;
   }

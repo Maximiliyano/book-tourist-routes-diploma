@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Route } from '../../models/route';
 import { HttpInternalService } from '../http-internal/http-internal.service';
+import { WorldPart } from 'src/app/enums/world-parts';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class RouteService {
 
   constructor(private httpService: HttpInternalService) { }
 
-  public getPopularRoutes() {
-    return this.httpService.getFullRequest(`${this.routePrefix}/all`);
+  public getPopularRoutes(worldPart: WorldPart | null) {
+    const queryParams = worldPart ? { worldPart: worldPart } : null;
+    return this.httpService.getFullRequest(`${this.routePrefix}/popular-routes`, { params: queryParams });
   }
 }

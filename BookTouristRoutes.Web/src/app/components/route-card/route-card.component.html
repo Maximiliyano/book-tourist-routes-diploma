@@ -13,14 +13,10 @@
     </div>
   </mat-card-header>
   <mat-card-content class="route-card-content">
-    <h2>Europe's most visited places</h2>
-    <p>Aenean in lacus nec dolor fermentum congue. Maecenas ut velit pharetra, pharetra tortor sit amet, vulputate
-      sem.
-      Vestibulum mi nibh, faucibus ac eros id, sagittis tincidunt velit. Proin interdum ullamcorper faucibus. Ut
-      mi
-      nunc, sollicitudin non pulvinar id, sagittis eget diam.</p>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
   </mat-card-content>
   <mat-card-actions class="route-buttons">
-    <button mat-raised-button>Details</button>
+    <button mat-raised-button (click)="getPopularRoutes(worldPart)">Details</button>
   </mat-card-actions>
 </mat-card>

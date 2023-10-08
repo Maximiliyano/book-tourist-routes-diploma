@@ -90,7 +90,7 @@ public sealed class JwtFactory : IJwtFactory
     catch (Exception)
     {
       // Token validation failed
-      return null;
+      return null!;
     }
   }
 

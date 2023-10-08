@@ -1,7 +1,5 @@
-﻿using System.Net;
-using BookTouristRoutes.Api.Extensions;
+﻿using BookTouristRoutes.Api.Extensions;
 using BookTouristRoutes.Api.Filters;
-using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.DAL.Context;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;

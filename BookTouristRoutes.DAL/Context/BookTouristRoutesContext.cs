@@ -10,9 +10,9 @@ public class BookTouristRoutesContext : DbContext
 
   public DbSet<User> Users { get; set; }
 
-  public DbSet<Booking> Bookings { get; set; }
-  
   public DbSet<RouteEntity> Routes { get; set; }
+
+  public DbSet<Booking> Bookings { get; set; }
 
   public DbSet<Image> Images { get; private set; }
 

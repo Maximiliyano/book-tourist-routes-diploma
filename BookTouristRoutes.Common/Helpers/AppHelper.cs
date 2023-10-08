@@ -59,4 +59,12 @@ public class AppHelper
     var random = new Random();
     return random.Next(min, max + 1);
   }
+
+  public static T RandomEnumValue<T>() where T : Enum
+  {
+    var values = Enum.GetValues(typeof(T));
+    var random = new Random();
+    return (T)(values.GetValue(random.Next(values.Length)) ?? throw new InvalidOperationException(
+      $"Invalid values in entity: {typeof(T).Name}"));
+  }
 }

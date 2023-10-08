@@ -2,6 +2,7 @@ using AutoMapper;
 using BookTouristRoutes.BLL.Interfaces.Repositories;
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.BLL.Services.Base;
+using BookTouristRoutes.Common.Enums;
 using BookTouristRoutes.Common.Exceptions;
 using BookTouristRoutes.Common.Models;
 
@@ -9,7 +10,9 @@ namespace BookTouristRoutes.BLL.Services;
 
 public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteService
 {
-  public RouteService(IRouteRepository routeRepository, IMapper mapper) : base(routeRepository, mapper)
+  public RouteService(
+    IRouteRepository routeRepository,
+    IMapper mapper) : base(routeRepository, mapper)
   {
   }
 
@@ -38,13 +41,14 @@ public class RouteService : BaseService<IRouteRepository, RouteEntity>, IRouteSe
     entity.BookedSeats = routeEntityDto.BookedSeats;
     entity.StartDate = routeEntityDto.StartDate;
     entity.EndDate = routeEntityDto.EndDate;
+    entity.WorldPart = routeEntityDto.WorldPart;
 
     await Update(entity);
     return entity;
   }
 
-  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price) =>
-    await _repository.Search(destination, startDate, price);
+  public async Task<IEnumerable<RouteEntity>> Search(string destination, DateTime? startDate, decimal? price, WorldParts? worldParts) =>
+    await _repository.Search(destination, startDate, price, worldParts);
 
   public async Task<int> GetSeatsCapacity(int routeId)
   {

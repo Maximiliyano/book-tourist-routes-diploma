@@ -19,20 +19,20 @@ public static class ServiceExtension
     service.AddScoped<JwtIssuerOptions>();
     service.AddScoped<IJwtFactory, JwtFactory>();
 
-    service.AddScoped<IBookingService, BookingService>();
-    service.AddScoped<IRouteService, RouteService>();
-    service.AddScoped<IUserService, UserService>();
     service.AddScoped<IImageService, ImageService>();
+    service.AddScoped<IUserService, UserService>();
+    service.AddScoped<IRouteService, RouteService>();
+    service.AddScoped<IBookingService, BookingService>();
     service.AddScoped<IAuthService, AuthService>();
   }
 
   public static void RegisterRepositories(this IServiceCollection service)
   {
-    service.AddScoped<IBookingRepository, BookingRepository>();
     service.AddScoped<IRouteRepository, RouteRepository>();
     service.AddScoped<IUserRepository, UserRepository>();
     service.AddScoped<IImageRepository, ImageRepository>();
     service.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+    service.AddScoped<IBookingRepository, BookingRepository>();
   }
 
   public static void RegisterAutoMapper(this IServiceCollection services)
@@ -48,56 +48,58 @@ public static class ServiceExtension
   {
       var secretKey = configuration["Jwt:SecretKey"];
 
+      if (secretKey == null) return;
+
       var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
 
       var jwtAppSettingOptions = configuration.GetSection(nameof(JwtIssuerOptions));
 
       services.Configure<JwtIssuerOptions>(options =>
       {
-          options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
-          options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
-          options.SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
+        options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
+        options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
+        options.SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
       });
 
       var tokenValidationParameters = new TokenValidationParameters
       {
-          ValidateIssuer = true,
-          ValidIssuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)],
+        ValidateIssuer = true,
+        ValidIssuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)],
 
-          ValidateAudience = true,
-          ValidAudience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)],
+        ValidateAudience = true,
+        ValidAudience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)],
 
-          ValidateIssuerSigningKey = true,
-          IssuerSigningKey = signingKey,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = signingKey,
 
-          RequireExpirationTime = false,
-          ValidateLifetime = true,
-          ClockSkew = TimeSpan.Zero
+        RequireExpirationTime = false,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
       };
 
       services.AddAuthentication(options =>
       {
-          options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-          options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
       }).AddJwtBearer(configureOptions =>
       {
-          configureOptions.ClaimsIssuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
-          configureOptions.TokenValidationParameters = tokenValidationParameters;
-          configureOptions.SaveToken = true;
+        configureOptions.ClaimsIssuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
+        configureOptions.TokenValidationParameters = tokenValidationParameters;
+        configureOptions.SaveToken = true;
 
-          configureOptions.Events = new JwtBearerEvents
+        configureOptions.Events = new JwtBearerEvents
+        {
+          OnAuthenticationFailed = context =>
           {
-              OnAuthenticationFailed = context =>
-              {
-                  if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                  {
-                      context.Response.Headers.Add("Token-Expired", "true");
-                  }
+            if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+            {
+              context.Response.Headers.Add("Token-Expired", "true");
+            }
 
-                  return Task.CompletedTask;
-              }
-          };
+            return Task.CompletedTask;
+          }
+        };
       });
   }
 }

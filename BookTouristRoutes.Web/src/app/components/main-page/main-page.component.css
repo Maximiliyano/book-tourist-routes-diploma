@@ -26,16 +26,19 @@ h2 {
   margin-bottom: 20px;
 }
 
-.route-list {
-  flex-wrap: wrap;
+.card-title {
+  text-align: center;
 }
 
-.destination-list {
+.route-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.continents-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-}
-
-.card-title {
-  text-align: center;
 }

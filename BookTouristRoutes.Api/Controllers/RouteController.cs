@@ -1,7 +1,6 @@
-
-
 using BookTouristRoutes.BLL.Interfaces.Services;
 using BookTouristRoutes.Common.BaseEntities;
+using BookTouristRoutes.Common.Enums;
 using BookTouristRoutes.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +11,14 @@ namespace BookTouristRoutes.Api.Controllers;
 public class RouteController : BaseController
 {
   private readonly IRouteService _routeService;
+  private readonly IBookingService _bookingService;
 
-  public RouteController(IRouteService routeService)
+  public RouteController(
+    IRouteService routeService,
+    IBookingService bookingService)
   {
     _routeService = routeService;
+    _bookingService = bookingService;
   }
 
   [HttpPost("new")]
@@ -42,9 +45,13 @@ public class RouteController : BaseController
   }
 
   [HttpGet("search/{destination}")]
-  public async Task<IActionResult> Search([FromRoute] string destination, [FromQuery] DateTime? startDate, [FromQuery] decimal? price)
+  public async Task<IActionResult> Search(
+    [FromRoute] string destination,
+    [FromQuery] DateTime? startDate,
+    [FromQuery] decimal? price,
+    [FromQuery] WorldParts? worldParts)
   {
-    return Ok(await _routeService.Search(destination, startDate, price));
+    return Ok(await _routeService.Search(destination, startDate, price, worldParts));
   }
 
   [HttpGet("availableSeats/{routeId:int}")]
@@ -69,6 +76,12 @@ public class RouteController : BaseController
   public async Task<IActionResult> GetAll()
   {
     return Ok(await _routeService.GetAll());
+  }
+
+  [HttpGet("popular-routes")]
+  public async Task<IActionResult> GetPopularRoutes([FromQuery] WorldParts? worldPart) // TODO GetPopularRoutes
+  {
+    return Ok(await _bookingService.GetPopularBookings(worldPart));
   }
 
   [HttpGet("details/{routeId:int}")]

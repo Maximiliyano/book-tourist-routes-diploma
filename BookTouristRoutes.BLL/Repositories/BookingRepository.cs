@@ -25,4 +25,11 @@ public class BookingRepository : Repository<Booking>, IBookingRepository
       .Where(x => x.UserId == userId)
       .AsNoTracking()
       .ToListAsync();
+
+  public async Task<IEnumerable<int>> GetFrequentBookings() =>
+    await _context.Bookings
+      .GroupBy(u => u.RouteId)
+      .Where(g => g.Count() > 1)
+      .Select(g => g.Key)
+      .ToListAsync();
 }

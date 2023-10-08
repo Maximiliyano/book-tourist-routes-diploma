@@ -6,16 +6,30 @@
 
   <section>
     <h2 class="card-title">Popular Routes</h2>
-    <div class="route-list">
-      <app-route-card *ngFor="let route of popularRoutes" [route]="route"></app-route-card>
+    <div class="route-cards">
+      <app-route-card [title]="'Europe\'s most visited places'"
+        [description]="'Aenean in lacus nec dolor fermentum congue. Maecenas ut velit pharetra, pharetra tortor sit amet, vulputate sem. Vestibulum mi nibh, faucibus ac eros id, sagittis tincidunt velit. Proin interdum ullamcorper faucibus. Ut mi nunc, sollicitudin non pulvinar id, sagittis eget diam.'"
+        [worldPart]="4" ]></app-route-card>
+      <app-route-card [title]="'Asia\'s most popular places'"
+        [description]="'Vivamus in massa ullamcorper nunc auctor accumsan ac at arcu. Donec sagittis mattis pharetra. Proin commodo, ante et volutpat pulvinar, arcu arcu ullamcorper diam, id maximus sem tellus id sem. Suspendisse eget rhoncus diam. Fusce urna elit, porta nec ullamcorper id.'"
+        [worldPart]="2"></app-route-card>
+      <app-route-card [title]="'America\'s most famous places'"
+        [description]="'Donec nec laoreet diam, at vehicula ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse nec dapibus nunc, quis viverra metus. Morbi eget diam gravida, euismod magna vel, tempor urna.'"
+        [worldPart]="5"></app-route-card>
     </div>
   </section>
 
   <section>
-    <h2 class="card-title">Featured Destinations</h2>
-    <div class="destination-list">
-      <app-destination-card *ngFor="let destination of featuredDestinations"
-        [destination]="destination"></app-destination-card>
+    <h2 class="card-title">Routes Contitents</h2>
+    <div class="continents-list">
+      <app-continents-card></app-continents-card>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="card-title">Google Map</h2>
+    <div class="map-routes">
+      <app-map-routes></app-map-routes>
     </div>
   </section>
 </div>

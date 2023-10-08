@@ -22,7 +22,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/chat-project/_packaging/chat-project/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -90,6 +92,10 @@
               "target": "Package",
               "version": "[7.0.4, )"
             },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -118,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -140,7 +146,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/chat-project/_packaging/chat-project/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -180,7 +187,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -202,7 +209,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/chat-project/_packaging/chat-project/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -273,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -295,7 +303,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/chat-project/_packaging/chat-project/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -350,7 +359,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
         }
       }
     }

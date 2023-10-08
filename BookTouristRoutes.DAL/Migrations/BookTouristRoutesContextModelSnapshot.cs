@@ -61,6 +61,528 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Bookings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3225.915904965909121m,
+                            RouteId = 19,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("8041dd45-326f-4fe5-be18-c722d62f6a12"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3799.753441937802667m,
+                            RouteId = 18,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("a3555525-b971-47df-8a3b-6249809427a4"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 5050.918459210723912m,
+                            RouteId = 14,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("bdfeaba7-aed1-45b4-b562-8732d1560f79"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2323.793203511773762m,
+                            RouteId = 3,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("d50dae0d-5a72-41a8-a975-0b6462845f2c"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 1982.379046387579201m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("84a2e29e-bf3e-4e92-a974-88340edc8937"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2902.155878840165749m,
+                            RouteId = 19,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("ab4c3218-f24d-42a9-9683-455b446e6741"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6138.300858937989697m,
+                            RouteId = 16,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 2,
+                            Uid = new Guid("7e0805c2-3bec-470b-a3db-f000311ff435"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 5820.951864779312887m,
+                            RouteId = 17,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("866b539f-77d4-45dd-adfb-3c8d0f25d449"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 1233.021896645464342m,
+                            RouteId = 2,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("e22a777f-92ce-434e-b920-4b66a55fa4a3"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 649.7850207469502476m,
+                            RouteId = 13,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("1908bf90-47b5-46aa-8724-0b164c45132b"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 20
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2160.32909473557595m,
+                            RouteId = 17,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 2,
+                            Uid = new Guid("a9e2b150-e8dd-4522-86ed-6e8699c321f6"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3430.076648067857314m,
+                            RouteId = 2,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("878cf889-02f3-4407-9c5e-045b07a52d95"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6971.807092516425928m,
+                            RouteId = 11,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("d515918a-0b83-4196-91fd-d84e3af6803e"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 911.6175251814768919m,
+                            RouteId = 17,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("320b5aee-e60c-47fb-aae7-e8ca4b92db03"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 7331.156534602953469m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 2,
+                            Uid = new Guid("b1e5976e-0d36-4ce1-9f99-c2608a2ad277"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 7228.302937818320764m,
+                            RouteId = 12,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("138d69b6-130b-4f05-8e47-67f64ec47499"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 4782.67658261789023m,
+                            RouteId = 8,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("b1689f59-84e2-42f5-8ac3-0ab1abdbc6d9"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6007.162513717786321m,
+                            RouteId = 10,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 2,
+                            Uid = new Guid("66554133-c5e3-4530-b477-9f29626eeea7"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2452.73886319413997m,
+                            RouteId = 17,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("03ae72e9-f291-42d0-ab40-89869e02a42d"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 4112.386889067762535m,
+                            RouteId = 3,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("5da4ed90-2a90-49ea-b8df-38252f48770a"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 8713.673775662692429m,
+                            RouteId = 12,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("1e2608db-bf2e-4b03-bdbe-53cc70628349"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 20
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 9398.096710430251834m,
+                            RouteId = 13,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("102ca7a5-fa33-4d95-9041-f6eb4d7f9ca6"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 21
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3198.977245523866861m,
+                            RouteId = 10,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("688c45a5-0a32-4d2b-80b0-5ecf77751e87"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 4276.365801087437452m,
+                            RouteId = 8,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("8903076d-6110-4038-8626-38d64544b070"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 8276.876941032910594m,
+                            RouteId = 3,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("b32e80ca-6b4d-44c0-9201-cbdeadd1c65f"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6376.431125775665107m,
+                            RouteId = 10,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("b38ebeee-8f65-4d46-834a-fc42745d11eb"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 1075.811228126120188m,
+                            RouteId = 9,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("687f519b-a76a-45cc-bfb3-1eaefd241f9f"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 8566.381968355888489m,
+                            RouteId = 17,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("4a8f958c-0691-4261-bc3f-366902751b03"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 4154.90910409504513m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 2,
+                            Uid = new Guid("2c8931d1-3ef5-4297-8eb8-285b2363a032"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 8045.343836010375454m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("7f6b4272-8d4b-48c7-8698-6eab45261550"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 7550.56281975194629m,
+                            RouteId = 14,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("31dbbc8e-3288-47a9-95bb-c3398ada7241"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 948.748537444082374m,
+                            RouteId = 9,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("8606e4e1-53c4-4846-a522-6b50efe6457a"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2248.128823542460165m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("85d76f65-5cef-4b55-8d5b-759d7d064c1c"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 21
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3990.072381205846132m,
+                            RouteId = 5,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("beaf4a15-00bd-4545-b84e-6cbd9cbde540"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 7062.538153312834939m,
+                            RouteId = 15,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("0f28a0da-04d6-482c-9e03-a594d130d74e"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 1394.704124927692138m,
+                            RouteId = 4,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("cdf611ad-119c-4521-b185-28314f25586d"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 20
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 2819.586031732897525m,
+                            RouteId = 3,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("69d1da99-2c1a-4c30-8e74-3fa0753cef69"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6790.544715825960022m,
+                            RouteId = 3,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 3,
+                            Uid = new Guid("a37b2ecd-0bbd-41fb-bccf-883dcc47b76d"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 3323.573358402863224m,
+                            RouteId = 20,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 1,
+                            Uid = new Guid("d7d23d27-f94b-4985-a719-2b760a867187"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2796),
+                            EndDate = new DateTime(2023, 7, 4, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2893),
+                            Price = 6856.641945542120005m,
+                            RouteId = 16,
+                            StartDate = new DateTime(2023, 7, 1, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2872),
+                            Status = 0,
+                            Uid = new Guid("49a98f14-282e-4196-8021-c6285dbbd9b6"),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 829, DateTimeKind.Local).AddTicks(2852),
+                            UserId = 14
+                        });
                 });
 
             modelBuilder.Entity("BookTouristRoutes.Common.Models.Image", b =>
@@ -89,282 +611,282 @@ namespace BookTouristRoutes.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4175),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/969.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4215)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/585.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4255),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/421.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4258)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/452.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4267),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1212.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4269)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1213.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4276),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/970.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4278)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/916.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4285),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/514.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4287)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/535.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4294),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/592.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4296)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/111.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4304),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/150.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4306)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/536.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4314),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/53.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4315)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/565.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4323),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/231.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4325)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/287.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4332),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/432.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4334)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1120.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4341),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/123.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4343)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/215.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4350),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1091.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4352)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/729.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4359),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/511.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4361)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/134.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4369),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/650.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4371)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/784.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4378),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/731.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4380)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1165.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4388),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/268.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4389)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/619.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4420),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/775.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4422)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1204.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4430),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/997.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4432)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/672.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4439),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/348.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4441)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/564.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4448),
-                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/414.jpg",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 384, DateTimeKind.Local).AddTicks(4449)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7298),
+                            URL = "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/334.jpg",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 802, DateTimeKind.Local).AddTicks(7366)
                         },
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1318),
-                            URL = "https://picsum.photos/640/480/?image=175",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1352)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8666),
+                            URL = "https://picsum.photos/640/480/?image=1029",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8693)
                         },
                         new
                         {
                             Id = 22,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1387),
-                            URL = "https://picsum.photos/640/480/?image=1045",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1390)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8726),
+                            URL = "https://picsum.photos/640/480/?image=13",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8728)
                         },
                         new
                         {
                             Id = 23,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1400),
-                            URL = "https://picsum.photos/640/480/?image=287",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1401)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8738),
+                            URL = "https://picsum.photos/640/480/?image=643",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8740)
                         },
                         new
                         {
                             Id = 24,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1410),
-                            URL = "https://picsum.photos/640/480/?image=505",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1412)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8748),
+                            URL = "https://picsum.photos/640/480/?image=373",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8750)
                         },
                         new
                         {
                             Id = 25,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1421),
-                            URL = "https://picsum.photos/640/480/?image=852",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1422)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8759),
+                            URL = "https://picsum.photos/640/480/?image=967",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8761)
                         },
                         new
                         {
                             Id = 26,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1431),
-                            URL = "https://picsum.photos/640/480/?image=422",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1432)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8770),
+                            URL = "https://picsum.photos/640/480/?image=804",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8772)
                         },
                         new
                         {
                             Id = 27,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1441),
-                            URL = "https://picsum.photos/640/480/?image=673",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1443)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8781),
+                            URL = "https://picsum.photos/640/480/?image=972",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8782)
                         },
                         new
                         {
                             Id = 28,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1451),
-                            URL = "https://picsum.photos/640/480/?image=714",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1453)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8790),
+                            URL = "https://picsum.photos/640/480/?image=707",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8792)
                         },
                         new
                         {
                             Id = 29,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1461),
-                            URL = "https://picsum.photos/640/480/?image=146",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1463)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8800),
+                            URL = "https://picsum.photos/640/480/?image=605",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8801)
                         },
                         new
                         {
                             Id = 30,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1470),
-                            URL = "https://picsum.photos/640/480/?image=825",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1472)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8809),
+                            URL = "https://picsum.photos/640/480/?image=855",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8811)
                         },
                         new
                         {
                             Id = 31,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1480),
-                            URL = "https://picsum.photos/640/480/?image=637",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1482)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8819),
+                            URL = "https://picsum.photos/640/480/?image=552",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8821)
                         },
                         new
                         {
                             Id = 32,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1489),
-                            URL = "https://picsum.photos/640/480/?image=1054",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1491)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8828),
+                            URL = "https://picsum.photos/640/480/?image=208",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8830)
                         },
                         new
                         {
                             Id = 33,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1522),
-                            URL = "https://picsum.photos/640/480/?image=1067",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1524)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8838),
+                            URL = "https://picsum.photos/640/480/?image=688",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8840)
                         },
                         new
                         {
                             Id = 34,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1533),
-                            URL = "https://picsum.photos/640/480/?image=757",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1535)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8873),
+                            URL = "https://picsum.photos/640/480/?image=563",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8875)
                         },
                         new
                         {
                             Id = 35,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1543),
-                            URL = "https://picsum.photos/640/480/?image=691",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1544)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8885),
+                            URL = "https://picsum.photos/640/480/?image=647",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8887)
                         },
                         new
                         {
                             Id = 36,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1552),
-                            URL = "https://picsum.photos/640/480/?image=88",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1554)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8896),
+                            URL = "https://picsum.photos/640/480/?image=649",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8897)
                         },
                         new
                         {
                             Id = 37,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1562),
-                            URL = "https://picsum.photos/640/480/?image=860",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1563)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8905),
+                            URL = "https://picsum.photos/640/480/?image=792",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8907)
                         },
                         new
                         {
                             Id = 38,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1571),
-                            URL = "https://picsum.photos/640/480/?image=466",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1572)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8916),
+                            URL = "https://picsum.photos/640/480/?image=705",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8918)
                         },
                         new
                         {
                             Id = 39,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1580),
-                            URL = "https://picsum.photos/640/480/?image=434",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1582)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8927),
+                            URL = "https://picsum.photos/640/480/?image=937",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8929)
                         },
                         new
                         {
                             Id = 40,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1590),
-                            URL = "https://picsum.photos/640/480/?image=806",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 386, DateTimeKind.Local).AddTicks(1592)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8937),
+                            URL = "https://picsum.photos/640/480/?image=568",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 803, DateTimeKind.Local).AddTicks(8939)
                         });
                 });
 
@@ -424,6 +946,9 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -441,7 +966,12 @@ namespace BookTouristRoutes.DAL.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("WorldPart")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ImageId");
 
                     b.ToTable("Routes");
 
@@ -449,282 +979,302 @@ namespace BookTouristRoutes.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(6658),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            Destination = "West Norrisfort",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(7161),
-                            Name = "New Dewittport",
-                            Price = 6428.207681824902841m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(7123),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(6658)
+                            BookedSeats = 8,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(6085),
+                            Description = "The Football Is Good For Training And Recreational Purposes",
+                            Destination = "West Wilhelmine",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "West Helenberg",
+                            Price = 9119.424504872338381m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(6085),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 2,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8432),
-                            Description = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-                            Destination = "Kamronport",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8511),
-                            Name = "South Carleton",
-                            Price = 6350.130278032564198m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8506),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8432)
+                            BookedSeats = 0,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8190),
+                            Description = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+                            Destination = "East Edd",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "East Madisynborough",
+                            Price = 9354.652541659973998m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8190),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 3,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8564),
-                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-                            Destination = "West Daphneeview",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8636),
-                            Name = "Schinnerhaven",
-                            Price = 7893.261257630721301m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8632),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8564)
+                            BookedSeats = 2,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8452),
+                            Description = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+                            Destination = "North Kattieside",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "West Rogerfort",
+                            Price = 8319.400532080707376m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8452),
+                            WorldPart = 4
                         },
                         new
                         {
                             Id = 4,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8681),
-                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            Destination = "West Christaville",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8720),
-                            Name = "Whiteside",
-                            Price = 2996.348276955336049m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8717),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8681)
+                            BookedSeats = 2,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8549),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Destination = "West Jessicaburgh",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Filomenaburgh",
+                            Price = 160.9513386705315928m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8549),
+                            WorldPart = 0
                         },
                         new
                         {
                             Id = 5,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8786),
-                            Description = "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-                            Destination = "Champlinville",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8822),
-                            Name = "Dickinsonport",
-                            Price = 9491.057778056975515m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8819),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8786)
+                            BookedSeats = 7,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8654),
+                            Description = "The Football Is Good For Training And Recreational Purposes",
+                            Destination = "South Rosaleemouth",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Lake Natalia",
+                            Price = 6535.338318359595865m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8654),
+                            WorldPart = 5
                         },
                         new
                         {
                             Id = 6,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8897),
-                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-                            Destination = "East Tia",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8933),
-                            Name = "Greenside",
-                            Price = 6915.330577551414061m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8930),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8897)
+                            BookedSeats = 5,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8781),
+                            Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+                            Destination = "Muellerstad",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "West Misty",
+                            Price = 8418.01678241167315m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8781),
+                            WorldPart = 0
                         },
                         new
                         {
                             Id = 7,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8966),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            Destination = "Susannaland",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9031),
-                            Name = "Lake Jordyfurt",
-                            Price = 7818.695210549994418m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9028),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(8966)
+                            BookedSeats = 4,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8881),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Destination = "West Elainafurt",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Denesikfort",
+                            Price = 8962.501200904915102m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8881),
+                            WorldPart = 5
                         },
                         new
                         {
                             Id = 8,
                             BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9064),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Destination = "Lake Amandaland",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9104),
-                            Name = "New Joannybury",
-                            Price = 5907.85310705725576m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9102),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9064)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8978),
+                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+                            Destination = "Runolfssonville",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Murrayhaven",
+                            Price = 7168.063588116524686m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(8978),
+                            WorldPart = 5
                         },
                         new
                         {
                             Id = 9,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9165),
-                            Description = "The Football Is Good For Training And Recreational Purposes",
-                            Destination = "North Velmafort",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9200),
-                            Name = "New Meda",
-                            Price = 4556.595666817335547m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9198),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9165)
+                            BookedSeats = 8,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9046),
+                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+                            Destination = "Rempelville",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "North Staceyport",
+                            Price = 1836.098609633795242m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9046),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 10,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9260),
-                            Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-                            Destination = "North Violet",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9295),
-                            Name = "Aileenview",
-                            Price = 2016.874100393373583m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9292),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9260)
+                            BookedSeats = 7,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9145),
+                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+                            Destination = "Kathrynmouth",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Brandyland",
+                            Price = 2222.898750037696609m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9145),
+                            WorldPart = 4
                         },
                         new
                         {
                             Id = 11,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9326),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            Destination = "North Andres",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9384),
-                            Name = "Port Thaddeus",
-                            Price = 3551.343009605448661m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9381),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9326)
+                            BookedSeats = 0,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9236),
+                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+                            Destination = "Schowalterport",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Tobyfort",
+                            Price = 2865.749937736241962m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9236),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 12,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9414),
-                            Description = "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-                            Destination = "New Chadd",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9452),
-                            Name = "East Albaberg",
-                            Price = 8649.687400840372402m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9449),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9414)
+                            BookedSeats = 2,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9322),
+                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+                            Destination = "Kutchton",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Nestorfurt",
+                            Price = 9490.314123582540247m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9322),
+                            WorldPart = 5
                         },
                         new
                         {
                             Id = 13,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9505),
+                            BookedSeats = 1,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9387),
                             Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-                            Destination = "East Tad",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9547),
-                            Name = "South Reeceborough",
-                            Price = 1017.901206423088624m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9544),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9505)
+                            Destination = "North Justinaview",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Alexishaven",
+                            Price = 3774.662813063301499m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9387),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 14,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9602),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Destination = "Lake Anibal",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9636),
-                            Name = "Jenkinsstad",
-                            Price = 8344.059756794519086m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9634),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9602)
+                            BookedSeats = 6,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9481),
+                            Description = "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+                            Destination = "Hudsonmouth",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "South Damian",
+                            Price = 5630.641859890502146m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9481),
+                            WorldPart = 6
                         },
                         new
                         {
                             Id = 15,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9665),
-                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-                            Destination = "North Jewellbury",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9720),
-                            Name = "West Clair",
-                            Price = 622.3363714832445622m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9718),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9665)
+                            BookedSeats = 3,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9573),
+                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+                            Destination = "Port Roman",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "East Jaymeburgh",
+                            Price = 9742.674930471320914m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9573),
+                            WorldPart = 5
                         },
                         new
                         {
                             Id = 16,
-                            BookedSeats = 1,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9758),
-                            Description = "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-                            Destination = "Lizziehaven",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9793),
-                            Name = "Ravenshire",
-                            Price = 6912.137088725254759m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9790),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9758)
+                            BookedSeats = 3,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9677),
+                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+                            Destination = "Lake Deven",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Tillmanton",
+                            Price = 6069.087188977211695m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9677),
+                            WorldPart = 2
                         },
                         new
                         {
                             Id = 17,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9862),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Destination = "South Zack",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9894),
-                            Name = "Schoenburgh",
-                            Price = 5232.953230482067012m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9892),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9862)
+                            BookedSeats = 5,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9749),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Destination = "Lake Brenden",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "East Stevieville",
+                            Price = 7608.580037655275755m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9749),
+                            WorldPart = 1
                         },
                         new
                         {
                             Id = 18,
                             BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9925),
-                            Description = "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-                            Destination = "Port Brody",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9985),
-                            Name = "Marcelletown",
-                            Price = 484.3754505454085299m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9982),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 410, DateTimeKind.Local).AddTicks(9925)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9844),
+                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+                            Destination = "Shemarside",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Federicoshire",
+                            Price = 7753.012657947235909m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9844),
+                            WorldPart = 4
                         },
                         new
                         {
                             Id = 19,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(15),
+                            BookedSeats = 6,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9933),
                             Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            Destination = "East Delaneyshire",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(76),
-                            Name = "South Chayashire",
-                            Price = 3056.715550647183754m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(73),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(15)
+                            Destination = "Port Pattiemouth",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "East Sunnychester",
+                            Price = 405.9615764706711661m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(9933),
+                            WorldPart = 4
                         },
                         new
                         {
                             Id = 20,
-                            BookedSeats = 0,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(113),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Destination = "Oberbrunnerside",
-                            EndDate = new DateTime(2023, 5, 3, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(145),
-                            Name = "South Orlando",
-                            Price = 470.6161373239435693m,
-                            Seats = 1,
-                            StartDate = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(143),
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 411, DateTimeKind.Local).AddTicks(113)
+                            BookedSeats = 3,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 828, DateTimeKind.Local).AddTicks(34),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Destination = "Gorczanyville",
+                            EndDate = new DateTime(2023, 7, 3, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5905),
+                            Name = "Port Laron",
+                            Price = 3689.840111755614112m,
+                            Seats = 8,
+                            StartDate = new DateTime(2023, 6, 28, 16, 28, 41, 827, DateTimeKind.Local).AddTicks(5869),
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 828, DateTimeKind.Local).AddTicks(34),
+                            WorldPart = 4
                         });
                 });
 
@@ -774,253 +1324,253 @@ namespace BookTouristRoutes.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            AvatarId = 18,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 388, DateTimeKind.Local).AddTicks(8478),
-                            Email = "Freddie.Langosh8@hotmail.com",
-                            Name = "Dolly.Cummerata30",
-                            Password = "TvwNxtZg7Jqb/JeS93S/L1kgqaE5UQ0oo/ZQIEKzB0U=",
+                            AvatarId = 13,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Christ.Bernhard42@yahoo.com",
+                            Name = "Molly30",
+                            Password = "4UMbOMGfgJF4C/lOBYKFDk2seyfadwGNr1J9iOsuKQA=",
                             Role = 0,
-                            Salt = "QGRv9+fnS4jzJooSUwhAdlm3W4TdLSYVmXEDdv6c79o=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 388, DateTimeKind.Local).AddTicks(8567)
+                            Salt = "IjawwImTImk1JGiMwu4TpXO4YEWuVF8MGZXjdskEZb4=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 2,
-                            AvatarId = 20,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 389, DateTimeKind.Local).AddTicks(8929),
-                            Email = "Carolina64@gmail.com",
-                            Name = "Allie82",
-                            Password = "olexg6eK41XV4VuS84BwPWJJpEblzdpKeqYvyh99dQY=",
-                            Role = 0,
-                            Salt = "TgCmniITFsmW8e6B6wccJXUUVNVOGeDBjD60zkeY7KM=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 389, DateTimeKind.Local).AddTicks(8936)
+                            AvatarId = 17,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Stephanie_Mueller@gmail.com",
+                            Name = "Izabella91",
+                            Password = "KgdFyDAihQTe6jZNpsdcqt2Rw7iUa+dB7KoPkyB1jxI=",
+                            Role = 1,
+                            Salt = "9G4mdfRrAsDXP6XN1u1TMS/dW6EZDMAV4/J/+YC9Nss=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 3,
-                            AvatarId = 14,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 390, DateTimeKind.Local).AddTicks(9233),
-                            Email = "Newell.Dach@gmail.com",
-                            Name = "Abel10",
-                            Password = "+iY55BAoYTAbH/FvI4bitXw2x4KWBkiGToy9r56VHe4=",
-                            Role = 1,
-                            Salt = "xNachfFQsOIL2Mg2BOa/a0KSUJMeI5MOhR26et6Onjw=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 390, DateTimeKind.Local).AddTicks(9239)
+                            AvatarId = 2,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Margot_Brown17@gmail.com",
+                            Name = "Maryse.Keebler",
+                            Password = "JbCP8laayzG7jrnqvSyX+rIlLUd1IJYv32Qbb5Yc1jE=",
+                            Role = 0,
+                            Salt = "YMJhqNeVGUrTAME9m32Bs6Oj4TDYKt57MjQi+BU117Y=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 4,
                             AvatarId = 12,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 391, DateTimeKind.Local).AddTicks(9308),
-                            Email = "Loren96@yahoo.com",
-                            Name = "Lyric10",
-                            Password = "sNT6m0jkQQ8YBRkc02fJzS6QZXSbYXdJEfLC8ZnNT6Q=",
-                            Role = 0,
-                            Salt = "lvdN6HHTXpRJ7nSehTm/jy4mhaU4NALXhBvoZNA+0jA=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 391, DateTimeKind.Local).AddTicks(9311)
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Jordyn_Block@hotmail.com",
+                            Name = "Carissa46",
+                            Password = "Oed22MyEDrtLUCfGBU3KTpE8djcHIKW6DqYzI5iUchI=",
+                            Role = 1,
+                            Salt = "gvh1l7mjW0jnCTG46hf2EJMbzOXckWtv8OXum68sVVg=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 5,
-                            AvatarId = 5,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 392, DateTimeKind.Local).AddTicks(9421),
-                            Email = "Juliana.Connelly69@gmail.com",
-                            Name = "Jewel42",
-                            Password = "969KHjEp93aczx/TqrvzN14XvAR/jms6sw0ue9T5kAs=",
+                            AvatarId = 8,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Seth20@yahoo.com",
+                            Name = "Adele62",
+                            Password = "h58yE0gpv/LLIHmfuyx7JFfcFsQ84jHNbVr30FmpNWY=",
                             Role = 1,
-                            Salt = "c3BgTDYWPPVZ2b2y4POW0qbTGZ+bW+FrITP94FBn/lQ=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 392, DateTimeKind.Local).AddTicks(9425)
+                            Salt = "5PeRq27Mkb8Yvc6BG06NMwYCj5E8st1yEqg+lOIa12U=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 6,
-                            AvatarId = 6,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 393, DateTimeKind.Local).AddTicks(9541),
-                            Email = "Mckenzie_Johnston12@gmail.com",
-                            Name = "Amiya_Bednar83",
-                            Password = "Z++OKOGTtmpJeJGZcBaUqtuqpuRjtFap6DTK/yW2qe0=",
+                            AvatarId = 14,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Minnie15@yahoo.com",
+                            Name = "Jerrell_Bradtke39",
+                            Password = "E6TRFhMsFpAnTBoPS4o8LSk/ejAn49GMApL4ePiJiac=",
                             Role = 1,
-                            Salt = "hO/TcFesmbrJoB8M5nZT6SuRju/bTyzMTTlWerIk4g4=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 393, DateTimeKind.Local).AddTicks(9545)
+                            Salt = "b9l5tKBuQuL3Q1s271EWaJhDjBadmcz11Xn7ETUsoLM=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 7,
-                            AvatarId = 5,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 394, DateTimeKind.Local).AddTicks(9772),
-                            Email = "Kaylin71@yahoo.com",
-                            Name = "Anahi_Kihn",
-                            Password = "mw4mVfywWBVzRLPonHFzuK7irhWBjFcSbQs5jqV1YoI=",
-                            Role = 1,
-                            Salt = "CBnWCGM6ZZhoM7a6iFa+CsbqIoBwOheb+PGHBNoRnPo=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 394, DateTimeKind.Local).AddTicks(9778)
+                            AvatarId = 16,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Jaden.Connelly@gmail.com",
+                            Name = "Dedrick.Veum2",
+                            Password = "+1Rrvy+Q9NBcwW8YkGOUgscy7EZ3iBXpbIThEIxQM4Y=",
+                            Role = 0,
+                            Salt = "inHp7bqsi7qxt3IejJy8IskOwXW62rZZewua7AIXk1w=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 8,
-                            AvatarId = 4,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 395, DateTimeKind.Local).AddTicks(9917),
-                            Email = "Braden_Crooks60@gmail.com",
-                            Name = "Art_Wiegand24",
-                            Password = "iscvI8XzGgbuRk7XQ/VtZcKTOS5Oiizu+lEPYVya8bY=",
-                            Role = 1,
-                            Salt = "28AQIePYkUbvN3DC6tteFXEGLsnF5KWbzbEcEHjFWd8=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 395, DateTimeKind.Local).AddTicks(9921)
+                            AvatarId = 15,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Estell_Legros99@hotmail.com",
+                            Name = "Roosevelt_Bradtke",
+                            Password = "T2wrcbZiX//wgQEmUEMr+piYjhxZ2xyY30UYnz4LqJI=",
+                            Role = 0,
+                            Salt = "lrdo4lnLjJBoEQiuxPMiz0bONnT85Rs1IPPR8Qztl2M=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 9,
-                            AvatarId = 5,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 397, DateTimeKind.Local).AddTicks(50),
-                            Email = "Benton_Thiel64@gmail.com",
-                            Name = "Lance20",
-                            Password = "UoORWhB6+0NclyRW4iCJ2VMnQJYTZHUTrX1CSnB5Frs=",
-                            Role = 1,
-                            Salt = "jjcZnlMQtsjpbVgxgyzMI74uTF7WiShY5RUi/PwaE3c=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 397, DateTimeKind.Local).AddTicks(54)
+                            AvatarId = 12,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Ashleigh.DuBuque@gmail.com",
+                            Name = "Bernita.Rau3",
+                            Password = "vdQYh3ihUYVHxGIuByu6ckgnD3dMafW1FtNtY67Gyy0=",
+                            Role = 0,
+                            Salt = "fnOLvn0zxwyaylw5zQiLAKLGyCfVJGnF/Xj1C56J/sI=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 10,
-                            AvatarId = 7,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 398, DateTimeKind.Local).AddTicks(124),
-                            Email = "Anibal_Kihn@yahoo.com",
-                            Name = "Anna.Crist",
-                            Password = "6DjgThOx8hdfdunZJthftEPTWhEgDKvT6uRFq7yFUSk=",
+                            AvatarId = 12,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Suzanne_Fritsch61@hotmail.com",
+                            Name = "Haskell87",
+                            Password = "yKV53IW9Fajab9Ynb/0jk6dH/0w+tbNF8w5N95pqh00=",
                             Role = 1,
-                            Salt = "vd+zF82USTYovXwfCX+Qx4MO8d4GX9JESERvynThri4=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 398, DateTimeKind.Local).AddTicks(128)
+                            Salt = "FCAZKJnpIyOTacLkVjjt1GUd8pTPjAh2tSjna1LegGg=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 11,
-                            AvatarId = 5,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 399, DateTimeKind.Local).AddTicks(155),
-                            Email = "Brady_Morissette@gmail.com",
-                            Name = "Maximillia54",
-                            Password = "8C4rMkmchXRRJeAfQEbGmNTCOKIJzfdwXK3d6oL9/tA=",
+                            AvatarId = 3,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Britney3@hotmail.com",
+                            Name = "Gladys_Mohr53",
+                            Password = "duuvTyUR7LOPESd4+V2+0XHddmd2NZU1E4KaZEWeXRk=",
                             Role = 0,
-                            Salt = "gQ8b5YwT5v7f6k81ygYlrbnkZ+xOWqlZCgqOIUSCxjY=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 399, DateTimeKind.Local).AddTicks(159)
+                            Salt = "tr8sUEcvQdA+Z2g//L/Pli/3NBs+M1cJu8okOnXXD9k=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 12,
-                            AvatarId = 4,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 400, DateTimeKind.Local).AddTicks(307),
-                            Email = "Constantin.Marks73@gmail.com",
-                            Name = "Della.Powlowski",
-                            Password = "Dg3fkf6+4EJ9SqdPM0ZyjjqNLQ1iqf0JpGO2CN75xcg=",
-                            Role = 0,
-                            Salt = "5p1ujs6PZbJr+ViJhBfXUtX7r7a5crJbKHiVVi4Ocd4=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 400, DateTimeKind.Local).AddTicks(311)
+                            AvatarId = 16,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Eldred43@hotmail.com",
+                            Name = "Reinhold.Funk",
+                            Password = "H7HB/djmtlkvJlMc5EDfX0JCfqLk6qm/zoJpFByornI=",
+                            Role = 1,
+                            Salt = "5lFbp2geXyzLIgpJHe/OFCj17BA80IUBcIZCwCzJ9u4=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 13,
-                            AvatarId = 11,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 401, DateTimeKind.Local).AddTicks(402),
-                            Email = "Wiley_Borer19@hotmail.com",
-                            Name = "Kenyon63",
-                            Password = "DE6/dhsMlbb96hW9hGAc6m61p941ASjlDcFT3XoawSw=",
-                            Role = 1,
-                            Salt = "auLfSssY/cUEJ/1458A4L+IiHN6W0YLq2GT3I5LAcp0=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 401, DateTimeKind.Local).AddTicks(406)
+                            AvatarId = 14,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Helene22@hotmail.com",
+                            Name = "Adelle59",
+                            Password = "6gMGpzhUZ5P7zpGEQtD+Xs2AamXH/6k5A/seaKWXAuw=",
+                            Role = 0,
+                            Salt = "RI8X61UNlSfgiFdQtMSkupoNFWxHrljQFdsHJ358Ht4=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 14,
-                            AvatarId = 9,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 402, DateTimeKind.Local).AddTicks(444),
-                            Email = "Narciso39@yahoo.com",
-                            Name = "Emilie.Block33",
-                            Password = "ZapHgy2xilXrMF1A3cwW21uTlZVPcdZerWF1/kwcZ3Q=",
-                            Role = 1,
-                            Salt = "Q1LO92cPsik+HoOEeSxeO/SKmj0hHUZCiHcdiAvchB4=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 402, DateTimeKind.Local).AddTicks(447)
+                            AvatarId = 8,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Rahul30@gmail.com",
+                            Name = "Noel.Rodriguez",
+                            Password = "BxoHVrmUOmZPqodF621wR1WKGH6vAEy6HZMo9ONWG7I=",
+                            Role = 0,
+                            Salt = "t650A+fOZojFNG9TE7ap05l1GoIzYpR4L2oqN0Yx1AM=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 15,
-                            AvatarId = 20,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 403, DateTimeKind.Local).AddTicks(563),
-                            Email = "Rickie.Kling69@gmail.com",
-                            Name = "Danny88",
-                            Password = "kxXhYJeXRF15vAAfQU/VUqEsTrX18Y28al/B9UYtXg0=",
+                            AvatarId = 9,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Terence17@yahoo.com",
+                            Name = "Jaunita.Schulist11",
+                            Password = "C7hbIJJ60Jbr05NXqfHiCxaXgv53ZhncNal7eCMtsvk=",
                             Role = 1,
-                            Salt = "zhh+lfFOYQ480+SXNRJYQBE/kNnH4ZYfJ1R6sFPPmhM=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 403, DateTimeKind.Local).AddTicks(567)
+                            Salt = "Sa4LkKCG5/BLVqdM0ey9gq/E7sE/M7Draa6aAbX3UZw=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 16,
-                            AvatarId = 18,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 404, DateTimeKind.Local).AddTicks(619),
-                            Email = "Unique.Herzog@hotmail.com",
-                            Name = "Murl30",
-                            Password = "+c9eIH8SafqNdbzzQrN0Pkzpxk9FZhz/uYPEeTwZU+8=",
+                            AvatarId = 20,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Kaleb_Schroeder@yahoo.com",
+                            Name = "Hoyt.White",
+                            Password = "5VNiIiOrT3gscc0uzFBUj6v8C0qMwNTanFIKE9+S42o=",
                             Role = 0,
-                            Salt = "9Eg2wrYhX/yqZHSPsmiY3GXRize9Lh7GUmTM2USFC7Y=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 404, DateTimeKind.Local).AddTicks(623)
+                            Salt = "zEYpgxX/naPF3YWxHvTJvryeTVht5pLA41Fuz6zL/XY=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 17,
-                            AvatarId = 18,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 405, DateTimeKind.Local).AddTicks(666),
-                            Email = "Arden94@yahoo.com",
-                            Name = "Valentin_Jacobs",
-                            Password = "og2wptUGl5n/9IOatJAzlrmGMUBKPg1IK5QSxVsGcYE=",
-                            Role = 1,
-                            Salt = "jcbuloy4J07MHukq1wbpYIXULibJV813lDcCPFBSYJ0=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 405, DateTimeKind.Local).AddTicks(670)
+                            AvatarId = 11,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Francisco87@gmail.com",
+                            Name = "Pearline_Feil",
+                            Password = "D+5fBiJKx269WwJuPLp4fLzeoIi8gs6L1NPZRx6Fusc=",
+                            Role = 0,
+                            Salt = "4Lz6lh7ohCwdemOLCLi2mQfIkxuNWP/L8AbFfHNzsGo=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 18,
-                            AvatarId = 12,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 406, DateTimeKind.Local).AddTicks(819),
-                            Email = "Judd4@yahoo.com",
-                            Name = "Gertrude28",
-                            Password = "8PEVtsQ19DmdWcWvXIsCtsqNcdfE/YcTLFDhIGRlo9o=",
+                            AvatarId = 20,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Rae_Hammes45@hotmail.com",
+                            Name = "Abdul.VonRueden",
+                            Password = "CzLq0ykI34Fk0ZmXLIP/CSOTr26GOCyydrvQBlE+Q1Q=",
                             Role = 1,
-                            Salt = "JbtAwOwnLxNHNTK/i9U1R5f2DK4TEnSa0J2YYeNfP/8=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 406, DateTimeKind.Local).AddTicks(823)
+                            Salt = "w5gLn7qEUsqOVRBO1fugIRIdrQl1F+S5yd8YLJpo8EQ=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 19,
-                            AvatarId = 14,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 407, DateTimeKind.Local).AddTicks(885),
-                            Email = "Drew_Spencer@hotmail.com",
-                            Name = "Euna50",
-                            Password = "8LTAz32Smk4R0/vhzMpRAD814lVDl3ZTDTwBi9adwkY=",
-                            Role = 0,
-                            Salt = "D/8lWogXPBy1nMfsscXi4Nq1bM/CbABbaYFSKEhc91A=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 407, DateTimeKind.Local).AddTicks(888)
+                            AvatarId = 13,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Paxton.Collier67@yahoo.com",
+                            Name = "Ernestine23",
+                            Password = "0d1yUy6X176wQ1f9VdGMVuf8ctQj/0tuOqvWp9XCx+4=",
+                            Role = 1,
+                            Salt = "ptUpPggOZSibPDPnmwX6Vv0L1wRfMduSY8BxdYjx85M=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 20,
-                            AvatarId = 16,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 408, DateTimeKind.Local).AddTicks(966),
-                            Email = "Murphy95@yahoo.com",
-                            Name = "Penelope.Fay16",
-                            Password = "5SH+qZCjPxl/+G8hymS1KNJ6904FCzF6K5Pw7bBPcsI=",
-                            Role = 0,
-                            Salt = "jvpN/K5+UGmxNZzd/8bGk8yO7OHossBZY4BJz6jGcSI=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 408, DateTimeKind.Local).AddTicks(970)
+                            AvatarId = 7,
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9625),
+                            Email = "Nestor_Jacobi@yahoo.com",
+                            Name = "Elwyn_Kuhn",
+                            Password = "2ykeEuVlHTovQmO9IBX8OzUMgC9HLTjdJ0YAPEPgc/E=",
+                            Role = 1,
+                            Salt = "rPQ19CJlcAEp4rDSsaCnXwe1rNBwrGOke022N+GDK6E=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 804, DateTimeKind.Local).AddTicks(9656)
                         },
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 409, DateTimeKind.Local).AddTicks(982),
+                            CreatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 826, DateTimeKind.Local).AddTicks(3215),
                             Email = "test@gmail.com",
                             Name = "testUser",
-                            Password = "/Atrz9u4h/IH8/FGNMgPxL74qw/N4gBg9nnJGCQUsRU=",
+                            Password = "wDqQIBu4Z0QrV4tYF1pLUgU6igqsX0ZW1zBzv6QjSNE=",
                             Role = 0,
-                            Salt = "B77btj8BvaWXoFQsYsCvKGJNMKr9suAy+nPBK4lxtaI=",
-                            UpdatedAt = new DateTime(2023, 4, 28, 19, 53, 4, 409, DateTimeKind.Local).AddTicks(982)
+                            Salt = "abErlRdw2M2TIU+QyS+EK6a8V6W9t8VaT5/Yzu8ZaJk=",
+                            UpdatedAt = new DateTime(2023, 6, 28, 16, 28, 41, 826, DateTimeKind.Local).AddTicks(3215)
                         });
                 });
 
@@ -1033,6 +1583,15 @@ namespace BookTouristRoutes.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BookTouristRoutes.Common.Models.RouteEntity", b =>
+                {
+                    b.HasOne("BookTouristRoutes.Common.Models.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
+
+                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("BookTouristRoutes.Common.Models.User", b =>

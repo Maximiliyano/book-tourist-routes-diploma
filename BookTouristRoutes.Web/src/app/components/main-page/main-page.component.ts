@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/internal/Subject';
 import { takeUntil } from 'rxjs/internal/operators/takeUntil';
+import { WorldPart } from 'src/app/enums/world-parts';
 import { Destination } from 'src/app/models/destination';
 import { Route } from 'src/app/models/route';
 import { User } from 'src/app/models/user';
@@ -20,6 +21,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
   public userRole: string;
   public popularRoutes: Route[];
   public featuredDestinations: Destination[];
+  public worldPart: WorldPart;
 
   private unsubscribe$ = new Subject<void>();
 
@@ -36,10 +38,6 @@ export class MainPageComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit() {
-    this.routeService.getPopularRoutes()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((routes) => {
-        this.popularRoutes = routes.body as Route[];
-      });
+
   }
 }
